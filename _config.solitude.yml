@@ -642,7 +642,7 @@ loading:
   favicon: https://bu.dusays.com/2025/04/13/67faa29addd90.png
   # Pace loading
   # Pace 加载
-  pace: false
+  pace: true
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
