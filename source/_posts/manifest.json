@@ -1,0 +1,49 @@
+{
+    "name": "网站名称",
+    "short_name": "网站名称缩写",
+    "theme_color": "#006a73",
+    "background_color": "#006a73",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/",
+    "id": "/",
+    "icons": [
+      {
+        "src": "/img/pwa/favicon_16.png",
+        "sizes": "16x16",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/img/pwa/favicon_16.png",
+        "sizes": "16x16",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/img/pwa/favicon_32.png",
+        "sizes": "32x32",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/img/pwa/favicon_32.png",
+        "sizes": "32x32",
+        "type": "image/png",
+        "purpose": "maskable"
+      },
+      {
+        "src": "/img/pwa/favicon.png",
+        "sizes": "180x180",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/img/pwa/favicon.png",
+        "sizes": "180x180",
+        "type": "image/png",
+        "purpose": "maskable"
+      }
+    ],
+    "splash_pages": null
+}
