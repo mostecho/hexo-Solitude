@@ -105,41 +105,35 @@ deploy:
   repo: git@github.com:mostecho/mostecho.github.io.git
   branch: main
 
+# https://github.com/hexojs/hexo-generator-feed
+#Feed Atom
+feed:
+  enable: true
+  type: atom
+  path: atom.xml
+  limit: 40
+  content:
+
+# 文章链接转数字或字母：https://github.com/rozbo/hexo-abbrlink
+abbrlink:
+    alg: crc16   #算法： crc16(default) and crc32
+    rep: hex     #进制： dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制
+
 swpp:
   # 是否启用插件
   enable: true
   # 是否在发布前自动执行脚本
-  auto_exec: true
+  # auto_exec: true
 
-algolia:
-  appId: "AEDV2NQ5N2"
-  apiKey: "100382da7366d7340c8ba23e204e83a9b"
-  adminApiKey: "33642056d7204e8dcc552e4181e8d0b3"
-  chunkSize: 5000
-  indexName: "hexo"
-  fields:
-    - content:strip:truncate,0,500
-    - permalink
-    - slug
-    - tags
-    - title
-
-# 追番插件
-# https://github.com/HCLonely/hexo-bilibili-bangumi
-bangumi: # 追番设置
-  enable: true
-  source: bili
-  path: /bangumi/index.html
-  vmid: 3493121818102620
-  title: "追番列表"
-  quote: "生命不息，追番不止！"
-  show: 1
-  lazyload: true
-  loading: 
-  showMyComment: false
-  pagination: false
-  extra_options:
-    top_img: false
-    lazyload:
-      enable: false
+# algolia:
+#   appId: "AEDV2NQ5N2"
+#   apiKey: "100382da7366d7340c8ba23e204e83a9b"
+#   adminApiKey: "33642056d7204e8dcc552e4181e8d0b3"
+#   chunkSize: 5000
+#   indexName: "hexo"
+#   fields:
+#     - permalink
+#     - slug
+#     - tags
+#     - title
 

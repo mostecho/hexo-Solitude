@@ -49,9 +49,8 @@ nav:
       最近评论: /recentcomment/ || fas fa-comment-dots
     娱乐:
       音乐: /music/ || fas fa-music
-      番剧: /anmie/ || fab fa-bilibili
       游戏: /games/ || fas fa-gamepad
-    我的:
+    关于:
       关于本站: /about/ || fas fa-address-card
       装备: /kit/ || fas fa-laptop
 
@@ -690,16 +689,16 @@ memorial:
 
 # --------------------------- start ---------------------------
 # OpenGraph
-OpenGraph:
-  enable: true
-  options:
-    twitter_card:
-    twitter_image:
-    twitter_id:
-    twitter_site:
-    google_plus:
-    fb_admins:
-    fb_app_id:
+# OpenGraph:
+#   enable: true
+#   options:
+#     twitter_card:
+#     twitter_image:
+#     twitter_id:
+#     twitter_site:
+#     google_plus:
+#     fb_admins:
+#     fb_app_id:
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -845,10 +844,10 @@ giscus:
 # Search
 search:
   enable: true
-  type: algolia # local / algolia / docsearch
+  type: local # local / algolia / docsearch
   tags:
-     - Solitude
-     - Hexo
+     - C
+     - C++
   # Algolia
   algolia:
      hits:
@@ -856,7 +855,7 @@ search:
 
   # Local search
   local:
-    preload: false
+    preload: true
     CDN: # url: search.xml
 
   # DocSearch
@@ -915,15 +914,15 @@ brevity:
 # Recent comments Page
 # 最近评论页面
 recent_comments:
-  enable: false
+  enable: true
   limit: 50 # ⚠️waline 仅支持最大50条评论 / ⚠️waline only supports a maximum of 50 comments
   cache: 0.2 # 1 = 1天 / 1 = 1 day
-  page: /recentcomments/ # 最近评论页面 / recent comments page
+  page: /recentcomment/ # 最近评论页面 / recent comments page
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
 # Busuanzi
-busuanzi: false
+busuanzi: true
 # 0: Original / 1: Custom
 # 0: 原版 / 1: 自定义版
 busuanzi_use: 0

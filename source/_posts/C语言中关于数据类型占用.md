@@ -1,12 +1,13 @@
 ---
 title: C语言中关于数据类型占用
-date: 2025-05-07 23:17:50
 tags:
-    - C++
-    - C
+  - C++
+  - C
 categories:
-    - C++
-    - C
+  - C++
+  - C
+abbrlink: 6ea2
+date: 2025-05-07 23:17:50
 ---
 
 # bit、byte、KB、B、字节、位、字符之间关系详解

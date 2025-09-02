@@ -13,11 +13,12 @@
   },
   "dependencies": {
     "hexo": "^7.0.0",
-    "hexo-algoliasearch": "^2.0.1",
-    "hexo-bilibili-bangumi": "^2.0.1",
+    "hexo-abbrlink": "^2.2.1",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
+    "hexo-generator-feed": "^3.0.0",
     "hexo-generator-index": "^3.0.0",
+    "hexo-generator-search": "^2.4.3",
     "hexo-generator-tag": "^2.0.0",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
@@ -29,5 +30,13 @@
     "hexo-theme-landscape": "^1.0.0",
     "hexo-wordcount": "^6.0.1",
     "swpp-backends": "^3.0.0-alpha.908"
+  },
+  "devDependencies": {
+    "compress": "^0.99.0",
+    "gulp": "^5.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-html-minifier-terser": "^7.1.0",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-terser": "^2.1.0"
   }
 }

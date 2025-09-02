@@ -1,13 +1,14 @@
 ---
 title: EasyX图形库游戏开发第二天
 series: EasyX图形库游戏开发
-date: 2025-04-27 23:08:33
 tags:
   - C++
   - 游戏
   - EasyX
 categories:
   - C++
+abbrlink: b57a
+date: 2025-04-27 23:08:33
 ---
 
 # EasyX图形库游戏开发第二天
