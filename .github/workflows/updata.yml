@@ -1,0 +1,68 @@
+name: 同步 Solitude 主题
+
+on:
+  schedule:
+    - cron: '0 2 * * 0'  # 每周日北京时间上午 10:00 运行（UTC 时间 2:00）
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  sync-theme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出 blog-solitude 仓库
+        uses: actions/checkout@v3
+        with:
+          repository: yutianqq/blog-solitude
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: blog-solitude
+          ref: main
+
+      - name: 检出 hexo-theme-solitude 仓库
+        uses: actions/checkout@v3
+        with:
+          repository: everfu/hexo-theme-solitude
+          path: hexo-theme-solitude
+
+      - name: 检查更新
+        id: check-update
+        run: |
+          cd hexo-theme-solitude
+          REMOTE_COMMIT=$(git rev-parse HEAD)
+          cd ../blog-solitude/themes/solitude
+          LOCAL_COMMIT=$(git rev-parse HEAD 2>/dev/null || echo "empty")
+          if [ "$REMOTE_COMMIT" != "$LOCAL_COMMIT" ]; then
+            echo "检测到更新"
+            echo "has_update=true" >> $GITHUB_OUTPUT
+          else
+            echo "无更新"
+            echo "has_update=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 同步主题文件
+        if: steps.check-update.outputs.has_update == 'true'
+        run: |
+          # 确保目标目录存在
+          mkdir -p blog-solitude/themes/solitude
+          
+          # 使用rsync更安全地同步（保留git历史）
+          sudo apt-get install -y rsync
+          rsync -a --delete hexo-theme-solitude/ blog-solitude/themes/solitude/
+          echo "文件同步完成"
+
+      - name: 提交并推送更改
+        if: steps.check-update.outputs.has_update == 'true'
+        run: |
+          cd blog-solitude
+          git config user.name "GitHub Actions Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # 检查实际变更
+          if git diff --quiet --exit-code -- themes/solitude; then
+            echo "警告：检测到更新但同步后无文件变化"
+            exit 0
+          fi
+          git add themes/solitude
+          git commit -m "chore(theme): 同步最新主题 $(date +'%Y-%m-%d %H:%M')"
+          git push origin HEAD:main -f  # 替换为你的分支名
+          echo "变更已推送"
