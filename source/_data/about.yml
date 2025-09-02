@@ -3,12 +3,10 @@ authorinfo:
   leftTags:
     - 🤖️ 数码科技爱好者
     - 🔍 分享与热心帮助
-    - 🏠 智能家居小能手
   rightTags:
     - 脚踏实地行动派 🏃
     - 团队小组发动机 🧱
-    - 壮汉人狠话不多 💢
-  image: https://cdn.lightxi.com/cloudreve/uploads/2025/08/01/tT8ILteu_logo.avif
+  image: https://bu.dusays.com/2025/04/13/67faa29addd90.png
 
 # 标题
 title: 关于本站
@@ -35,7 +33,7 @@ skills: # 根据需求添加
   tags:
     - title: C
       color: "#fff"
-      icon: fab fa-c
+      icon: fab fa-vs
     # - title: Docker
     #   color: "#57b6e6"
     #   icon: fab fa-docker
