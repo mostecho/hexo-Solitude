@@ -127,3 +127,22 @@ algolia:
     - tags
     - title
 
+# 追番插件
+# https://github.com/HCLonely/hexo-bilibili-bangumi
+bangumi: # 追番设置
+  enable: true
+  source: bili
+  path: 
+  vmid: 3493121818102620
+  title: "追番列表"
+  quote: "生命不息，追番不止！"
+  show: 1
+  lazyload: true
+  loading: 
+  showMyComment: true
+  pagination: false
+  extra_options:
+    top_img: true
+    lazyload:
+      enable: false
+

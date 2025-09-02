@@ -1,0 +1,35 @@
+banner_suffix:
+links:
+  - class_name: 框架与主题
+    descr: 本站搭建采用的原框架与主题
+    type: card
+    suffix:
+    link_list:
+      - name: Hexo
+        link: https://hexo.io/zh-cn/
+        avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+        descr: 快速、简单且强大的网站框架
+        topimg: https://s2.loli.net/2024/11/10/Zm5dvbLOUMr9iFk.webp
+      - name: 张洪Heo
+        link: https://blog.zhheo.com/
+        avatar: https://img.zhheo.com/i/67d8fa75943e4.webp
+        descr: 分享设计与科技生活
+        topimg: https://img.zhheo.com/i/67d8fb5f563ff.webp
+      - name: Solitude
+        link: https://solitude.js.org/
+        avatar: https://s2.loli.net/2024/10/10/hOTRIKV4vy6EMf2.webp
+        descr: 一个卡片UI主题，适用于 Hexo
+        topimg: https://s2.loli.net/2025/01/21/RcNxQMy6mfliXtS.png
+  - class_name: 小伙伴
+    descr: 一些可爱的朋友🥰
+    type: item
+    suffix:
+    link_list:
+      - name: ❖星港◎Star☆
+        link: https://blog.starsharbor.com
+        avatar: https://bu.dusays.com/2025/04/11/67f92f6fcfb26.webp
+        descr: 以博客记录生活与热爱！
+      - name: Mo的记事簿
+        link: https://blog.xiowo.net/
+        avatar: https://blog.xiowo.net/img/avatar.png
+        descr: 万年鸽王，哈哈OvO
