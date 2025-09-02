@@ -540,7 +540,7 @@ footer:
       Copyright: /copyright/
 
   # 随机友链
-  randomlink: false # 随机友链
+  randomlink: true # 随机友链
 
   # 备案
   beian:
