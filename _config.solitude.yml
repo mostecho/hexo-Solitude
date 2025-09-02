@@ -759,7 +759,7 @@ extends:
 # PWA
 # Progressive Web App
 pwa:
-  enable: true
+  enable: false
   manifest: /manifest.json # manifest.json
   theme_color: "#006a73" # Theme color
   mask_icon: /img/pwa/favicon.png # Mask icon
