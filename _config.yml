@@ -5,7 +5,7 @@
 # Site
 title: monstecho
 subtitle: 天马行空的幻想
-description: <b>我爱你，即使连死亡也无法阻挡</b>
+description: 我爱你，即使连死亡也无法阻挡
 keywords: 二次元,编程,游戏,博客,monstecho
 author: monstecho
 language: zh-CN
@@ -109,7 +109,7 @@ swpp:
   # 是否启用插件
   enable: true
   # 是否在发布前自动执行脚本
-  # auto_exec: true
+  auto_exec: true
 
 algolia:
   appId: "AEDV2NQ5N2"
@@ -119,10 +119,7 @@ algolia:
   indexName: "hexo"
   fields:
     - content:strip:truncate,0,500
-    - excerpt:strip
-    - gallery
     - permalink
-    - photos
     - slug
     - tags
     - title
@@ -132,17 +129,17 @@ algolia:
 bangumi: # 追番设置
   enable: true
   source: bili
-  path: 
+  path: /bangumi/index.html
   vmid: 3493121818102620
   title: "追番列表"
   quote: "生命不息，追番不止！"
   show: 1
   lazyload: true
   loading: 
-  showMyComment: true
+  showMyComment: false
   pagination: false
   extra_options:
-    top_img: true
+    top_img: false
     lazyload:
       enable: false
 
