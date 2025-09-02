@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://www.monstecho.top
-permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/ 
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -111,7 +111,7 @@ feed:
   enable: true
   type: atom
   path: atom.xml
-  limit: 40
+  limit: 60
   content:
 
 # 文章链接转数字或字母：https://github.com/rozbo/hexo-abbrlink
@@ -124,16 +124,3 @@ swpp:
   enable: true
   # 是否在发布前自动执行脚本
   # auto_exec: true
-
-# algolia:
-#   appId: "AEDV2NQ5N2"
-#   apiKey: "100382da7366d7340c8ba23e204e83a9b"
-#   adminApiKey: "33642056d7204e8dcc552e4181e8d0b3"
-#   chunkSize: 5000
-#   indexName: "hexo"
-#   fields:
-#     - permalink
-#     - slug
-#     - tags
-#     - title
-

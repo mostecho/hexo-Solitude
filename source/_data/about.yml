@@ -31,21 +31,21 @@ skills: # 根据需求添加
   title: 技能
   subtitle: 开启创造力
   tags:
-    - title: C
+    - title: vscode
       color: "#fff"
-      icon: fab fa-vs
+      icon: fab 
     # - title: Docker
     #   color: "#57b6e6"
     #   icon: fab fa-docker
-    # - title: Node
-    #   color: "#333"
-    #   icon: fab fa-node
+    - title: Node
+      color: "#333"
+      icon: fab fa-node
     # - title: Vue
     #   color: "#b8f0ae"
     #   icon: fab fa-vuejs
-    # - title: JS
-    #   color: "#f7cb4f"
-    #   icon: fab fa-js
+    - title: JS
+      color: "#f7cb4f"
+      icon: fab fa-js
     - title: HTML
       color: "#e9572b"
       icon: fab fa-html5
@@ -60,9 +60,13 @@ careers:
   subtitle: 无限进步
   items:
     - school: 软件工程
-      major: 学习
+      major: 本科就读ing
       color: "#357ef5"
-  image: https://cdn.lightxi.com/cloudreve/uploads/2025/07/31/y5BrUhFv_67a216483c354.webp
+    - school: 个人博客
+      major: 学习ing
+      color: "yellow"
+    
+  image: 
 
 # 性格模块
 personalities:

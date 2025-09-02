@@ -49,10 +49,10 @@ nav:
       最近评论: /recentcomment/ || fas fa-comment-dots
     娱乐:
       音乐: /music/ || fas fa-music
-      游戏: /games/ || fas fa-gamepad
+      # 游戏: /games/ || fas fa-gamepad
     关于:
       关于本站: /about/ || fas fa-address-card
-      装备: /kit/ || fas fa-laptop
+      # 装备: /kit/ || fas fa-laptop
 
   # Right button
   # 右侧按钮
@@ -99,8 +99,8 @@ hometop:
         img: https://i.postimg.cc/nhgjwjCS/git.png
         color: "#df5b40"
   group:
-    热门: /tags/Fire/ || fas fa-fire || linear-gradient(to right,#f65,#ffbf37)
-    日记: /tags/日记/ || fas fa-book || linear-gradient(to right,#f6a,#f3f)
+    朋友: /links// || fas fa-user-group || linear-gradient(to right,#f65,#ffbf37)
+    随笔: /essay/ || fas fa-book || linear-gradient(to right,#f6a,#f3f)
   recommendList:
     enable: true
     sup: 置顶
@@ -519,8 +519,9 @@ rightside:
 footer:
   # 社交图标
   information:
-    author: true # img url / false
+    author: https://bu.dusays.com/2025/04/13/67faa29addd90.png # img url / false
     left:
+      52pojie: https://www.52pojie.cn/home.php?mod=space&uid=1739646 || fas fa-user-secret
       Github: https://github.com/mostecho || fab fa-github # 名称: 链接 || 图标
       Mail: mailto:1305057393@qq.com || far fa-envelope
     right:
@@ -533,7 +534,7 @@ footer:
       归档: /archives/
       分类: /categories/
       标签: /tags/
-    排列:
+    社交:
       Cookies: /cookies/
       Privacy: /privacy/
       Copyright: /copyright/
@@ -560,9 +561,9 @@ footer:
         - fab fa-creative-commons-by
         - fab fa-creative-commons-nc
         - fab fa-creative-commons-nd
-    - name: boringbay
+    - name: monstecho
       url: https://www.monstecho.com/
-      img: https://boringbay.com/api/badge/www.efu.me
+      img: https://bu.dusays.com/2025/04/13/67faa29addd90.png
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -623,7 +624,7 @@ keyboard:
 # Lazyload
 # 懒加载
 lazyload:
-  enable: true
+  enable: false
   field: site
   placeholder: ""
   errorimg: /img/error_load.avif
@@ -638,10 +639,10 @@ loading:
   fullpage: true
   # Loading icon, default is siteicon
   # 加载图标，不写默认siteicon
-  favicon: 
+  favicon: https://bu.dusays.com/2025/04/13/67faa29addd90.png
   # Pace loading
   # Pace 加载
-  pace: true
+  pace: false
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -871,15 +872,15 @@ search:
 # Music Page
 # 音乐馆
 music:
-  enable: false
+  enable: true
   # 歌单 ID / 单曲 ID
-  id: 5144842535
+  id: 14232307657
   # 服务商：netease / qq / xiami / kugou / baidu
   server: netease
   # 类型：playlist / song
   type: playlist
   # 默认音量
-  volume: 0.8
+  volume: 0.7
   # 是否自动播放
   mutex: true
   # 播放方式：list / random
