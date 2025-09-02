@@ -44,11 +44,11 @@ nav:
       标签: /tags/ || fas fa-tags
     社交:
       朋友们: /links/ || fas fa-user-group
-      随笔: /essay/ || fas fa-pen-nib
       留言板: /message/ || fas fa-book
       最近评论: /recentcomment/ || fas fa-comment-dots
     我的:
-      音乐: /music/ || fas fa-music
+      随笔: /essay/ || fas fa-pen-nib
+      音乐馆: /music/ || fas fa-music
       # 游戏: /games/ || fas fa-gamepad
     关于:
       关于本站: /about/ || fas fa-address-card
