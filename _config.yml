@@ -124,3 +124,12 @@ swpp:
   enable: true
   # 是否在发布前自动执行脚本
   # auto_exec: true
+  gen_dom: true
+  # ⚠️警告！！！未启用链接追踪时不要使用永久缓存，否则会导致被缓存的数据永远不会更新，在您不再使用该资源时，缓存也不会被删除！！！
+  # track_link: false
+  # 生成的 diff 文件的路径（可以是绝对路径也可以是相对路径，使用相对路径时相对于网站发布目录），留空表示不生成（默认为 null）
+  # gen_diff: './diff.json'
+  # 是否在执行 hexo deploy 时自动执行 swpp 指令
+  auto_exec: true
+  # 检查更新的网址，默认 "https://registry.npmjs.org"，注意不能以斜杠结尾
+  # npm_url: 'https://registry.npmmirror.com'
