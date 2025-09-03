@@ -157,3 +157,9 @@ hexo_safego:
     countdowntime: 5           # 跳转页面倒计时秒数，如果设置为负数则为不自动跳转
   debug:                        # 调试设置
     enable: false               # 启用调试模式
+
+    sitemap:
+      path: sitemap.xml
+      priority: 0.5
+      changefreq: daily
+      lastmod: true
