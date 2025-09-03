@@ -117,8 +117,14 @@ div
     if page.comment
       include ../widgets/third-party/comments/js
     if theme.mermaid
+      script(defer src=url_for(theme.cdn.mermaid_js))
       script.
-        mermaid.run();
+        document.addEventListener('DOMContentLoaded', function() {
+          if (window.mermaid && typeof mermaid.run === 'function') {
+            mermaid.run();
+          }
+        });
+       
 
     if theme.busuanzi && (theme.aside.siteinfo.uv || theme.aside.siteinfo.pv || is_post() && theme.post.meta.pv)
       script(defer pjax src=url_for(theme.cdn.busuanzi_js))
