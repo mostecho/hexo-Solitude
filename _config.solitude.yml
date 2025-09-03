@@ -20,7 +20,7 @@
 site:
   name: 
     class: text # text / i_class / img
-    custom: Solitude # Solitude / fas fa-ghost / /img/pwa/favicon.ico
+    custom: 你好！ # Solitude / fas fa-ghost / /img/pwa/favicon.ico
   icon: https://bu.dusays.com/2025/04/13/67faa29addd90.png # Site icon / 网站图标
 # --------------------------- end ---------------------------
 
@@ -64,6 +64,12 @@ nav:
        icon: fas fa-train # 图标
        onclick: # 点击事件
        id: travellings_button # id
+     - name: 深色模式
+       url: javascript:void(0) # link
+       icon: fas fa-circle-half-stroke # icon
+       onclick: sco.switchDarkMode()
+       id: display_mode_button
+
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------

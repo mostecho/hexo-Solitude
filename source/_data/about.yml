@@ -144,7 +144,7 @@ likes:
     button_link: "/pyq/" # 跳转路径
     button_text: "观看记录" # 按钮文字
   - type: like-technology
-    bg: https://solitude.js.org/example.png
+    bg: https://bu.dusays.com/2025/04/30/681101a28eeb8.jpg
     tips: 关注偏好
     title: 科技与数码
     subtips: 科技爱好者
@@ -172,8 +172,8 @@ oneself: # 按需填写
   major: 软件工程 # 专业
   occupation: 学生 # 职位
   map: # 你所在位置的地图
-    light: https://solitude.js.org/example.png # 白天
-    dark: https://solitude.js.org/example.png # 夜晚
+    light: https://bu.dusays.com/2025/09/03/68b7fe44c8793.png # 白天
+    dark: https://bu.dusays.com/2025/09/03/68b7fe44c8793.png # 夜晚
 
 # 自定义
 # cause:
