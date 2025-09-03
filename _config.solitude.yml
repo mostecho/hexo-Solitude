@@ -49,10 +49,10 @@ nav:
     我的:
       随笔: /essay/ || fas fa-pen-nib
       音乐馆: /music/ || fas fa-music
+      装备: /kit/ || fas fa-laptop
       # 游戏: /games/ || fas fa-gamepad
     关于:
       关于本站: /about/ || fas fa-address-card
-      # 装备: /kit/ || fas fa-laptop
 
   # Right button
   # 右侧按钮
@@ -228,7 +228,7 @@ page:
     # 未设置封面时的默认图片
     cover:
       - /img/default.avif
-      - https://bu.dusays.com/2025/04/25/680b5e97f02f0.png 
+      # - https://bu.dusays.com/2025/04/25/680b5e97f02f0.png 
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -240,7 +240,7 @@ post:
     # 未设置封面时的默认图片
     cover:
       - /img/default.avif # 默认图片 / default cover
-      - https://bu.dusays.com/2025/04/25/680b5e97f02f0.png 
+      # - https://bu.dusays.com/2025/04/25/680b5e97f02f0.png 
     # Location
     # 位置
     locate: China
@@ -258,7 +258,7 @@ post:
   # Article Local AI
   # 文章本地AI
   ai:
-    enable: true
+    enable: false
     modelName: 小七 GPT
   # Article meta information
   # 文章元信息
@@ -371,7 +371,7 @@ font:
 # 当用户退出页面时，修改标题
 lure:
   enable: true
-  jump: 404 Not Found
+  jump: w(ﾟДﾟ)w 不要走！再看看嘛！
   back: ヾ(≧∇≦*)ゝHey, hey, you fell for it.
 # --------------------------- end ---------------------------
 
@@ -400,7 +400,7 @@ index_post_list:
 # 相关文章
 related_post:
   enable: true
-  limit: 2
+  limit: 3
   # created: release date / updated: update date
   # created: 发布日期 / updated: 更新日期
   date_type: created
@@ -438,6 +438,16 @@ right_menu:
       id:
       class:
       icon: fas fa-tags
+    - name: 随笔
+      click: pjax.loadUrl('/essay/')
+      id:
+      class:
+      icon: fas fa-pen-nib
+    - name: 留言板
+      click: pjax.loadUrl('/message/')
+      id:
+      class:
+      icon: fas fa-book
 # --------------------------- end -----------------------
 
 # --------------------------- start ---------------------------
@@ -535,9 +545,9 @@ footer:
       分类: /categories/
       标签: /tags/
     社交:
-      Cookies: /cookies/
-      Privacy: /privacy/
-      Copyright: /copyright/
+      朋友们: /links/
+      留言板: /message/
+      最近评论: /recentcomment/
 
   # 随机友链
   randomlink: true # 随机友链
