@@ -137,8 +137,6 @@ hexo_safego:
     apply_pages:                # 应用的页面路径
       - "/posts/"
       - "/tags/"
-      - "/categories/"
-      - "/archives/"
       - "/history/"
       - "/essays/"
       - "/links/"
@@ -150,7 +148,6 @@ hexo_safego:
     domain_whitelist:           # 允许的白名单域名，通过字符串匹配实现
       - "mostecho.github.io"
       - "www.monstecho.top"
-      - "www.baidu.com"
       - "www.blog.monstecho.top"
   appearance:                   # 页面外观设置
     avatar: https://bu.dusays.com/2025/04/13/67faa29addd90.png  # 跳转页面头像路径

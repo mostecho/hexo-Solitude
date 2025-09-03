@@ -12,11 +12,11 @@
       image: https://bu.dusays.com/2025/09/03/68b7b5c90704c.png
       link: https://support.apple.com/zh-cn/122209
 
-# - class_name: 出行
-#   description: 用来出行的实物及设备
-#   equipment_list:
-#     - name: AirPods Pro
-#       specification: 标准版
-#       description: 可以说是非常强的耳机了，还有好几次固件大幅度更新。apple生态只要有两个设备及以上，必入。
-#       image: https://solitude.js.org/example.png
-#       link: https://www.apple.com.cn/airpods-pro/
+- class_name: 出行
+  description: 用来出行的实物及设备
+  equipment_list:
+    - name: TITAN S2
+      specification: 标准版
+      description: 可以说是非常强的耳机了，性价比很高。
+      image: https://bu.dusays.com/2025/09/03/68b8501b01551.jpg
+      link: https://www.dunu-topsound.com/titans2

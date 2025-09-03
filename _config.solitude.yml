@@ -59,7 +59,8 @@ nav:
       装备: /kit/ || fas fa-laptop
       # 游戏: /games/ || fas fa-gamepad
     关于:
-      关于本站: /about/ || fas fa-address-card
+      关于我: /about/ || fas fa-address-card
+      关于本站: /site/ || fas fa-info-circle
 
   # Right button
   # 右侧按钮
@@ -114,6 +115,7 @@ hometop:
   group:
     朋友: /links// || fas fa-user-group || linear-gradient(to right,#f65,#ffbf37)
     随笔: /essay/ || fas fa-book || linear-gradient(to right,#f6a,#f3f)
+    工具: /tools/ || fas fa-wrench || linear-gradient(to right,#6cf,#3af)
   recommendList:
     enable: true
     sup: 置顶
@@ -712,17 +714,16 @@ memorial:
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
-# OpenGraph
-# OpenGraph:
-#   enable: true
-#   options:
-#     twitter_card:
-#     twitter_image:
-#     twitter_id:
-#     twitter_site:
-#     google_plus:
-#     fb_admins:
-#     fb_app_id:
+OpenGraph:
+  enable: true
+  options:
+    twitter_card:
+    twitter_image:
+    twitter_id:
+    twitter_site:
+    google_plus:
+    fb_admins:
+    fb_app_id:
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
