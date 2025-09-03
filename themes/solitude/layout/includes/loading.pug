@@ -10,6 +10,8 @@ script.
                 document.getElementById('loading-box').classList.add('loaded');
                 preloader.isLoaded = true;
                 preloader.togglePaceDone();
+                const paceEl = document.querySelector('.pace');
+                if (paceEl) paceEl.classList.add('pace-inactive');
             }
         },
         initLoading: () => {
