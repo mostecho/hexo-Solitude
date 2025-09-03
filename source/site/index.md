@@ -4,7 +4,7 @@ date: 2025-09-02 12:46:45
 type: site
 cover: "https://bu.dusays.com/2025/09/03/68b84f9067e25.webp"
 desc: 站点详情
-comment: false
+comment: true
 leftend: ""
 rightbtn: "关于我"
 rightbtnlink: "/about/"
@@ -30,8 +30,6 @@ rightbtnlink: "/about/"
 {% fold 使WakaTime统计 open %}
 <figure><embed src="https://wakatime.com/share/@monstecho/f744180f-807f-40b2-bdcc-d06ecdeb4741.svg"></embed></figure>
 {% endfold %}
-
-
 
 {% timeline 建站历史 %}
 {% timenode 2025-09-02 %}
