@@ -95,11 +95,11 @@ motto:
 
 # 特长模块
 expertise:
-  title: 特长
+  title: 菜就多练
   prefix: 编程，数学，化学
   specialist: 菜鸟
-  content: 学习能力
-  level: 中等  
+  content: 学习能力≈
+  level: 1/∞
 
 # 游戏模块
 # 这个模块可以写多个，但最好不要超过 4 个。

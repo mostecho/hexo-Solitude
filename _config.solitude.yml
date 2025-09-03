@@ -20,7 +20,7 @@
 site:
   name: 
     class: text # text / i_class / img
-    custom: 你好！ # Solitude / fas fa-ghost / /img/pwa/favicon.ico
+    custom: 欢迎回家 # Solitude / fas fa-ghost / /img/pwa/favicon.ico
   icon: https://bu.dusays.com/2025/04/13/67faa29addd90.png # Site icon / 网站图标
 # --------------------------- end ---------------------------
 
