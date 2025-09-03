@@ -154,7 +154,7 @@ aside:
     # 介绍 / Introduction
     description: 我爱你，即使连死亡也无法阻挡
     # 内容 / Content
-    content:  这是我的博客<br>记录我的生活和学习<br>也记录了我来时的路，也记录我将去的远方
+    content:  这是我的博客<br>记录我的生活和学习<br>也记录了我来时的路,记录我将去的远方
     state:  
       morning: ✨ 早上好master，新的一天开始了
       noon: 🍲 现在是干饭时间
