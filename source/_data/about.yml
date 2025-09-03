@@ -190,7 +190,7 @@ oneself: # 按需填写
 # 十年之约
 tenyear:
   tips: 十年之约
-  title: 一个人的寂寞，一群人的狂欢。
+  title: 从零开始，我在等十年后等你。
   start: 2025-04-01
   end: 2035-04-01
 
@@ -201,8 +201,8 @@ award:
   tips: 总金额：¥ {sum}，将全部用于博客的维护和更新。 # 必须带 {sum}，否则无法显示总金额
 rewardList: # 底部捐赠
   # - name: "❖星港◎Star☆"
-  #   money: 100
-  #   time: 2025-01-01
+  #   money: 5
+  #   time: 2025-04-05
   #   icon: fab fa-weixin
   #   color: "#09bb07"
   # - name: "沫塔尔猫"

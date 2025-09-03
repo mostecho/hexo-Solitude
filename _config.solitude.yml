@@ -36,10 +36,12 @@ nav:
   # Left Box
   # 左侧盒子
   group:
-    project: # name
+    项目: # name
       Solitude: https://github.com/everfu/hexo-theme-solitude || /img/pwa/favicon.ico # name: url || icon
-
-  # Menu
+      easyX游戏: https://github.com/mostecho/C-game || https://bu.dusays.com/2025/04/25/680b3880d3653.png
+    跳转:
+      开往: https://www.travellings.cn/go.html || https://www.travellings.cn/assets/travelling-dark.png
+      旧站点: https://blog.monstecho.top || https://bu.dusays.com/2025/04/13/67faa29addd90.png
   # 菜单
   menu:
     首页: / # name: link
@@ -299,19 +301,22 @@ post:
   # Reward
   # 打赏
   award:
-    enable: false
+    enable: true
     appreciators: /about/ # Reward page
     # Reward Title
     # 打赏标题
-    title: # Thanks for your appreciation. / 感谢您的赞赏
-    desc: # Because of your support, I realize the value of writing articles. / 由于您的支持，我才能够实现写作的价值。
+    title:  感谢您的赞赏
+    desc:  由于您的支持，我才能够实现写作的价值，我会更加努力的！
     # Reward list
     # 打赏列表
     list:
-      # - name: Github Sponsor
-      #   qcode: https://s3.qjqq.cn/47/661ba900c4bc1.webp!color
-      #   url: https://github.com/sponsors/everfu
-      #   color: var(--efu-black)
+      - name: weixin pay
+        qcode: https://bu.dusays.com/2025/09/04/68b873e2bd410.png
+        color: var(--green)
+      
+      - name: alipay
+        qcode: https://bu.dusays.com/2025/09/04/68b8764492cbe.png
+        color: var(--blue)
 
   # Share icon
   # 分享图标
@@ -533,8 +538,8 @@ rightside:
   percent: true
   hide:
     enable: true
-    translate: ture
-    mode: ture
+    translate: true
+    mode: true
     aside: true
 # --------------------------- start ---------------------------
 
