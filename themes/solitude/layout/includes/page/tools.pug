@@ -1,0 +1,16 @@
+include ../widgets/page/banner
+#tools.article-container
+    if site.data.tools
+        each cls in site.data.tools
+            h2= cls.class_name + " (" + (cls.link_list ? cls.link_list.length : 0) + ")"
+            .tools-group-desc= cls.class_desc
+            .flink-list
+                if cls.link_list
+                    each item in cls.link_list
+                        .flink-list-item
+                            a(href=item.link, target="_blank")
+                                img(src=item.avatar, alt=item.name || '')
+                                .site-card-text
+                                    .title= item.name || ''
+                                    if item.descr
+                                        .desc= item.descr

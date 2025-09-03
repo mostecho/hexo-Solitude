@@ -1,7 +1,8 @@
 hexo.extend.filter.register('stylus:renderer', function (style) {
     const {config, theme} = this;
     const data = hexo.locals.get('data');
-
+    
+    style.define('$tools', !!(data && data.tools)) 
     style.define('$about', data && data.about ? Object.keys(data.about) : {});
 
     // highlight

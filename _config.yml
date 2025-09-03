@@ -118,3 +118,45 @@ feed:
 abbrlink:
     alg: crc16   #算法： crc16(default) and crc32
     rep: hex     #进制： dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制
+
+# hexo-safego安全跳转插件
+# see https://blog.liushen.fun/posts/1dfd1f41/
+hexo_safego:
+  general:                        # 基本功能设置
+    enable: true                # 启用插件
+    enable_base64_encode: true  # 使用 Base64 编码
+    enable_target_blank: true   # 从新窗口打开跳转页面
+  security:                     # 安全设置
+    url_param_name: 'u'         # URL 参数名
+    html_file_name: 'go.html'   # 重定向页面的文件名
+    ignore_attrs:               # 忽略处理的 HTML 结构
+      - 'data-fancybox'
+  scope:                        # 容器与页面设置
+    apply_containers:           # 应用的容器选择器
+      - '#post'
+    apply_pages:                # 应用的页面路径
+      - "/posts/"
+      - "/tags/"
+      - "/categories/"
+      - "/archives/"
+      - "/history/"
+      - "/essays/"
+      - "/links/"
+      - "/message/"
+      - "/tools/"
+    exclude_pages:
+      # - "/about/" 
+  whitelist:                    # 域名白名单
+    domain_whitelist:           # 允许的白名单域名，通过字符串匹配实现
+      - "mostecho.github.io"
+      - "www.monstecho.top"
+      - "www.baidu.com"
+      - "www.blog.monstecho.top"
+  appearance:                   # 页面外观设置
+    avatar: https://bu.dusays.com/2025/04/13/67faa29addd90.png  # 跳转页面头像路径
+    title: "monstecho"            # 跳转页面标题
+    subtitle: "安全中心提示你不要乱点，它与本站不存在法律裙带关系ヽ（≧□≦）ノ"         # 跳转页面副标题
+    darkmode: false             # 是否启用深色模式
+    countdowntime: 5           # 跳转页面倒计时秒数，如果设置为负数则为不自动跳转
+  debug:                        # 调试设置
+    enable: false               # 启用调试模式

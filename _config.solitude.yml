@@ -23,6 +23,11 @@ site:
     custom: 欢迎回家 # Solitude / fas fa-ghost / /img/pwa/favicon.ico
   icon: https://bu.dusays.com/2025/04/13/67faa29addd90.png # Site icon / 网站图标
 # --------------------------- end ---------------------------
+background:
+  enable: true
+  opacity: .2
+  dark: https://bu.dusays.com/2025/06/16/68502bfcc1761.jpeg
+  light: https://bu.dusays.com/2025/04/17/6800b5a97f49d.jpg
 
 # --------------------------- start ---------------------------
 # Navigation bar
@@ -42,6 +47,7 @@ nav:
       归档: /archives/ || fas fa-folder-closed # item name: link || icon
       分类: /categories/ || fas fa-clone
       标签: /tags/ || fas fa-tags
+      统计: /history/ || fas fa-chart-bar
     社交:
       朋友们: /links/ || fas fa-user-group
       留言板: /message/ || fas fa-book
@@ -767,8 +773,10 @@ extends:
     - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     - <script>LA.init({id:"3NJhjjIGsyd5FQ6e",ck:"3NJhjjIGsyd5FQ6e"})</script>
     - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    - <script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script>
     - <link rel="stylesheet" href="/schedule/schedule.css">
     - <link rel="stylesheet" href="/css/custom.css">
+    - <script src="//instant.page/5.2.0" type="module"></script>
 
   # Insert in body
   # 插入到 body
