@@ -20,6 +20,7 @@ links:
         avatar: https://s2.loli.net/2024/10/10/hOTRIKV4vy6EMf2.webp
         descr: 一个卡片UI主题，适用于 Hexo
         topimg: https://s2.loli.net/2025/01/21/RcNxQMy6mfliXtS.png
+        
   - class_name: 小伙伴
     descr: 一些可爱的朋友🥰
     type: item
@@ -33,3 +34,39 @@ links:
         link: https://blog.xiowo.net/
         avatar: https://blog.xiowo.net/img/avatar.png
         descr: 万年鸽王，哈哈OvO
+
+      - name: 快乐小凳凳`Blog
+        link: https://dqywy.top/
+        avatar: https://s1.ax1x.com/2023/06/11/pCVjudK.png
+        descr: Sow nothing, reap nothing.
+
+      - name: 王权富贵
+        link: https://blog.w1f.top/
+        avatar: https://tu.w1f.top/file/1754042909789_favicon.png
+        descr: 岁月温柔，万物生长。
+        siteshot: https://tu.w1f.top/file/1754228138583_image.png
+
+      - name: Prorise
+        link: https://prorise666.site/
+        avatar: https://bu.dusays.com/2025/08/29/68b19c2396986.png
+        descr: Prorise - 分享全栈技术与实战
+        tags: 大佬
+
+  - class_name: 网站
+    class_desc: 值得推荐的网站
+    type: item
+    link_list:
+      - name: 哔哩哔哩
+        link: https://www.bilibili.com/
+        avatar: https://bu.dusays.com/2025/04/25/680b37f965599.png
+        descr: BilBil
+
+      - name: GitHub
+        link: https://github.com/mostecho
+        avatar: https://bu.dusays.com/2025/04/25/680b3880d3653.png
+        descr: 全球最大的开源网站
+
+      - name: Acwing
+        link: https://www.acwing.com/
+        avatar: https://bu.dusays.com/2025/04/25/680b3923b0f75.jpg
+        descr: 快乐学习生活，尽在AcWing

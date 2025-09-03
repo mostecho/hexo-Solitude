@@ -47,6 +47,7 @@ nav:
       留言板: /message/ || fas fa-book
       最近评论: /recentcomment/ || fas fa-comment-dots
     我的:
+      工具: /tools/ || fas fa-wrench
       随笔: /essay/ || fas fa-pen-nib
       音乐馆: /music/ || fas fa-music
       装备: /kit/ || fas fa-laptop

@@ -1,0 +1,25 @@
+  - class_name: 资源网站
+    class_desc: 获取各种资源的网站
+    type: item
+    link_list:
+      - name: GitHub
+        link: https://github.com/mostecho
+        avatar: https://bu.dusays.com/2025/04/25/680b3880d3653.png
+        descr: 全球最大的开源网站
+
+
+  - class_name: 工具网站
+    class_desc: 能帮得上忙的网站
+    type: item
+    link_list:
+      - name: zhale.me
+        link: https://zhale.me/
+        avatar: https://bu.dusays.com/2025/09/03/68b8128649e3a.webp
+        descr: 网络拨测工具
+
+      - name: FreeConvert
+        link: https://www.freeconvert.com/zh
+        avatar: https://cdn.freeconvert.com/logo_theme.svg
+        descr: 免费在线文件格式转换器(支持视频、音频、图片、文档等)
+
+      
