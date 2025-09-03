@@ -6,8 +6,6 @@ include ./mixins/common.pug
 
 - const { information, group } = theme.footer
 
-<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({id:"3NJhjjIGsyd5FQ6e",ck:"3NJhjjIGsyd5FQ6e"})</script>
 //- 文章页脚栏组件
 mixin postFooterBar()
   if theme.post.footer.enable && is_post()

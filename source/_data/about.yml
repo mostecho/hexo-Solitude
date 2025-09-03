@@ -16,7 +16,7 @@ title: 关于本站
 contentinfo: # 顶部个人信息展示
   sup: 你好，很高兴认识你👋
   name: 我叫monstecho # 名称
-  title: 是一名学生、软件工程师、独立开发者 # 介绍
+  title: 是一名学生、独立开发者 # 介绍
   tip: 追求
   slogan: 源于<br>热爱而去
   mask:
@@ -31,15 +31,15 @@ skills: # 根据需求添加
   title: 技能
   subtitle: 开启创造力
   tags:
-    - title: vscode
+    - title: markdown
       color: "#fff"
-      icon: fab 
-    # - title: Docker
-    #   color: "#57b6e6"
-    #   icon: fab fa-docker
+      icon: fab fa-markdown
     - title: Node
-      color: "#333"
+      color: "#57b6e6"
       icon: fab fa-node
+    - title: github
+      color: "#333"
+      icon: fab fa-github
     # - title: Vue
     #   color: "#b8f0ae"
     #   icon: fab fa-vuejs
@@ -65,6 +65,12 @@ careers:
     - school: 个人博客
       major: 学习ing
       color: "yellow"
+    - school: 独立开发者
+      major: 业余时间
+      color: "orange"
+    - school: 逆向工程
+      major: 自学ing
+      color: "green"
     
   image: 
 
@@ -119,22 +125,22 @@ likes:
     title: 追番 # 标题
     subtips: "科幻、动漫、喜剧" # 左下小字，可不要
     list: # 最好就是五个或以上，相信你们肯定没那么少的。
-      - name: 你的名字 # 动漫或影视名
-        href: https://movie.douban.com/subject/26683290/ # B站或豆瓣某个位置
-        cover: https://s3.qjqq.cn/47/674c6e226855e.png!water # 封面图
-      - name: 四月是你的谎言
-        href: https://www.bilibili.com/bangumi/media/md1699
-        cover: https://s3.qjqq.cn/47/674c6e226855e.png!water
-      - name: 流浪地球2
-        href: https://movie.douban.com/subject/35267208/
-        cover: https://s3.qjqq.cn/47/674c6e226855e.png!water
-      - name: 花束般的恋爱
-        href: https://movie.douban.com/subject/34874432/
-        cover: https://s3.qjqq.cn/47/674c6e226855e.png!water
-      - name: 天气之子
-        href: https://movie.douban.com/subject/30402296/
-        cover: https://s3.qjqq.cn/47/674c6e226855e.png!water
-    button: true # false 可以关闭右边按钮
+      - name: 葬送的芙莉莲 # 动漫或影视名
+        href: https://www.bilibili.com/bangumi/media/md21087073 # B站或豆瓣某个位置
+        cover: https://bu.dusays.com/2025/09/03/68b7c949b7b9e.webp # 封面图
+      - name: Re：从零开始的异世界生活 新编集版
+        href: https://www.bilibili.com/bangumi/media/md28224394
+        cover: https://bu.dusays.com/2025/09/03/68b7c94edc9a1.webp
+      - name: Re：从零开始的异世界生活 第二季 前半
+        href: https://www.bilibili.com/bangumi/media/md28229233
+        cover: https://bu.dusays.com/2025/09/03/68b7c98a6b71b.webp
+      - name: Re：从零开始的异世界生活 第二季 后半
+        href: https://www.bilibili.com/bangumi/media/md28232073
+        cover: https://bu.dusays.com/2025/09/03/68b7c9b3c1721.webp
+      - name: 紫罗兰永恒花园
+        href: https://www.bilibili.com/bangumi/media/md8892
+        cover: https://bu.dusays.com/2025/06/21/6856916db844d.webp
+    button: false # false 可以关闭右边按钮
     button_link: "/pyq/" # 跳转路径
     button_text: "观看记录" # 按钮文字
   - type: like-technology
@@ -154,13 +160,13 @@ likes:
 # 网站统计数据展示模块
 tj: # 统计
   provider: 51la # 值为 51la（51la网站统计）或 custom（自建统计）
-  url: https://v6.51.la/report/realtime?comId=3088532  # 需要到51la官网注册自行获取 or 自行搭建 Heo 的 百度统计项目，填写访问地址即可
-  img: https://i.p-i.vip/33/20250725-6883987819a97.webp # 背景
-  desc: 本站采用自建数据统计
+  url: https://v6.51.la/s/Vms4VDpP06Y2VIF  # 需要到51la官网注册自行获取 or 自行搭建 Heo 的 百度统计项目，填写访问地址即可
+  img: https://bu.dusays.com/2025/09/03/68b7ce5262337.webp # 背景
+  desc: 本站采用51la数据统计
 
 # 个人信息模块
 oneself: # 按需填写
-  location: 中国，湖北省 # 所在位置
+  location: 中国，重庆 # 所在位置
   birthYear: 2006 # 生日
   university: 暂未毕业 # 毕业学校
   major: 软件工程 # 专业
