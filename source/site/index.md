@@ -27,7 +27,7 @@ rightbtnlink: "/about/"
 本站项目地址
 {% github 'mostecho/hexo-Solitude' %}
 
-{% fold 使用waka time统计 open %}
+{% fold 使WakaTime统计 open %}
 <figure><embed src="https://wakatime.com/share/@monstecho/f744180f-807f-40b2-bdcc-d06ecdeb4741.svg"></embed></figure>
 {% endfold %}
 
