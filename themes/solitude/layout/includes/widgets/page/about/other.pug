@@ -4,7 +4,7 @@
 if tj || oneself
     .author-content
         if tj
-            .about-statistic.author-content-item
+            .about-statistic.author-content-item(style=`background: url(${tj.img});`)
                 .card-content
                     .author-content-item-tips=_p('about.other.tj.tip')
                     span.author-content-item-title=_p('about.other.tj.title')

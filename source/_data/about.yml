@@ -161,7 +161,7 @@ likes:
 tj: # 统计
   provider: 51la # 值为 51la（51la网站统计）或 custom（自建统计）
   url: https://v6.51.la/s/Vms4VDpP06Y2VIF  # 需要到51la官网注册自行获取 or 自行搭建 Heo 的 百度统计项目，填写访问地址即可
-  # img: withe # 背景
+  img: https://bu.dusays.com/2025/09/03/68b7ce5262337.webp # 背景
   desc: 本站采用51la数据统计
 
 # 个人信息模块
