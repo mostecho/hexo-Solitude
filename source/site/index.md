@@ -21,10 +21,10 @@ rightbtnlink: "/about/"
 - 字体：[得意黑](https://www.fonts.net.cn/font-41693134998.html)
 - 评论：[twikoo](https://twikoo.js.org/)
 - 搜索：[hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
-- 音乐来源:[网易云音乐](https://music.163.com/#/playlist?id=14232307657)
+- 音乐来源：[网易云音乐](https://music.163.com/#/playlist?id=14232307657)
 - 访问统计:[51la](https://v6.51.la/)
 
-本站项目地址
+## 本站项目地址
 {% github 'mostecho/hexo-Solitude' %}
 
 {% fold 使WakaTime统计 open %}
