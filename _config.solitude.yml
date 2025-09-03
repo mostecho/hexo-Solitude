@@ -937,7 +937,7 @@ envelope:
 brevity:
   enable: true
   home_mini: true
-  music: false
+  music: true
   page: /essay/
   style: 1
   strip: 30
