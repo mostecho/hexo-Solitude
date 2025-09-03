@@ -28,7 +28,7 @@ rightbtnlink: "/about/"
 {% github 'mostecho/hexo-Solitude' %}
 
 {% fold 使用waka time统计 open %}
-<!-- <figure><embed src="https://wakatime.com/share/@monstecho/f744180f-807f-40b2-bdcc-d06ecdeb4741.svg"></embed></figure> -->
+<figure><embed src="https://wakatime.com/share/@monstecho/f744180f-807f-40b2-bdcc-d06ecdeb4741.svg"></embed></figure>
 {% endfold %}
 
 
@@ -44,7 +44,7 @@ rightbtnlink: "/about/"
 开始更新 EasyX图形库游戏开发系列内容 {% spoiler 'blur' '现已停更' %}
 {% endtimenode %}
 {% timenode 2025-04-18 %}
-发表了第一篇文章 {% bubble '个人介绍' '现在感觉多余了' 'blue' %} {% spoiler 'blur' '现已删除' %}
+发表了第一篇文章 个人介绍 {% spoiler 'blur' '现已删除' %}
 {% endtimenode %}
 {% timenode 2025-04-16 %}
 完成 [butterfly](https://github.com/jerryc127/hexo-theme-butterfly)主题的全部配置
