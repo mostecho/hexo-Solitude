@@ -1,7 +1,13 @@
 ---
-title: history
+title: 文章统计
 date: 2025-09-03 19:42:43
 type: history
+cover: "https://bu.dusays.com/2025/04/17/6800b5144e6aa.jpg"
+desc: 文章数据分析
+comment: true
+leftend: ""
+rightbtn: "关于本站"
+rightbtnlink: "/site/"
 ---
 
 <!-- 文章发布时间统计图 -->

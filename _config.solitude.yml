@@ -23,6 +23,7 @@ site:
     custom: 欢迎回家 # Solitude / fas fa-ghost / /img/pwa/favicon.ico
   icon: https://bu.dusays.com/2025/04/13/67faa29addd90.png # Site icon / 网站图标
 # --------------------------- end ---------------------------
+
 background:
   enable: true
   opacity: .2
@@ -123,7 +124,7 @@ hometop:
     sup: 置顶
     title: Solitude 官方文档
     url: https://solitude.js.org/
-    img: /img/default.avif
+    img: https://bu.dusays.com/2025/04/17/6800b4f3b38ad.jpg
     color: "none"
 # --------------------------- end ---------------------------
 

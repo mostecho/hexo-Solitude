@@ -6,12 +6,14 @@ cover: "https://bu.dusays.com/2025/09/03/68b84f9067e25.webp"
 desc: 站点详情
 comment: true
 leftend: ""
-rightbtn: "关于我"
-rightbtnlink: "/about/"
+rightbtn: "文章统计"
+rightbtnlink: "/history/"
 ---
-
 ## 站点简介
 一个编程菜鸟记录生活和学习的小破站，希望你能喜欢。
+
+文章分析
+{% button 'fas fa-chart-bar' '文章统计' '/history/' %}
 
 架构概览
 - 框架：[Hexo](https://hexo.io/zh-cn/)
