@@ -791,7 +791,7 @@ comment:
   commentBarrage: true
   # Lazy load
   # 懒加载评论区
-  lazyload: true
+  lazyload: false
   # Whether to display the comment count
   # 显示评论数
   count: true
