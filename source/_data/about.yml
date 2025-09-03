@@ -153,7 +153,7 @@ likes:
 
 # 网站统计数据展示模块
 tj: # 统计
-  provider: custom # 值为 51la（51la网站统计）或 custom（自建统计）
+  provider: 51la # 值为 51la（51la网站统计）或 custom（自建统计）
   url: https://v6.51.la/report/realtime?comId=3088532  # 需要到51la官网注册自行获取 or 自行搭建 Heo 的 百度统计项目，填写访问地址即可
   img: https://i.p-i.vip/33/20250725-6883987819a97.webp # 背景
   desc: 本站采用自建数据统计
