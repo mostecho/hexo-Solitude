@@ -1,68 +1,52 @@
-name: 同步 Solitude 主题
-
-on:
-  schedule:
-    - cron: '0 2 * * 0'  # 每周日北京时间上午 10:00 运行（UTC 时间 2:00）
-  workflow_dispatch:  # 允许手动触发
+name: Deploy blog to GitHub
+on:  # 在有推送时触发，同时保留手动触发的功能
+  push:
+  workflow_dispatch:
 
 jobs:
-  sync-theme:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 检出 blog-solitude 仓库
-        uses: actions/checkout@v3
-        with:
-          repository: yutianqq/blog-solitude
-          token: ${{ secrets.GITHUB_TOKEN }}
-          path: blog-solitude
-          ref: main
+    - name: Checkout branch
+      uses: actions/checkout@v4
+      with:
+        ref: main
 
-      - name: 检出 hexo-theme-solitude 仓库
-        uses: actions/checkout@v3
-        with:
-          repository: everfu/hexo-theme-solitude
-          path: hexo-theme-solitude
+    - name: Install Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: "latest"
 
-      - name: 检查更新
-        id: check-update
-        run: |
-          cd hexo-theme-solitude
-          REMOTE_COMMIT=$(git rev-parse HEAD)
-          cd ../blog-solitude/themes/solitude
-          LOCAL_COMMIT=$(git rev-parse HEAD 2>/dev/null || echo "empty")
-          if [ "$REMOTE_COMMIT" != "$LOCAL_COMMIT" ]; then
-            echo "检测到更新"
-            echo "has_update=true" >> $GITHUB_OUTPUT
-          else
-            echo "无更新"
-            echo "has_update=false" >> $GITHUB_OUTPUT
-          fi
+    - name: Install Hexo
+      run: |
+        export TZ='Asia/Shanghai'
+        npm install hexo-cli -g
 
-      - name: 同步主题文件
-        if: steps.check-update.outputs.has_update == 'true'
-        run: |
-          # 确保目标目录存在
-          mkdir -p blog-solitude/themes/solitude
-          
-          # 使用rsync更安全地同步（保留git历史）
-          sudo apt-get install -y rsync
-          rsync -a --delete hexo-theme-solitude/ blog-solitude/themes/solitude/
-          echo "文件同步完成"
+    - name: Install deps
+      run: |
+        npm install --save
 
-      - name: 提交并推送更改
-        if: steps.check-update.outputs.has_update == 'true'
-        run: |
-          cd blog-solitude
-          git config user.name "GitHub Actions Bot"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # 检查实际变更
-          if git diff --quiet --exit-code -- themes/solitude; then
-            echo "警告：检测到更新但同步后无文件变化"
-            exit 0
-          fi
-          git add themes/solitude
-          git commit -m "chore(theme): 同步最新主题 $(date +'%Y-%m-%d %H:%M')"
-          git push origin HEAD:main -f  # 替换为你的分支名
-          echo "变更已推送"
+    - name: Generate static files
+      run: |
+        hexo clean
+        node ./link.js
+        hexo generate
+
+    - name: Deploy
+      run: |
+        git clone https://github.com/[你的 GitHub 用户名]/[你的被部署仓库] # 克隆被部署仓库
+        cd BLOG || exit 1
+        # 以下两行，是为了解决只复制文件，可能会导致我们想要删除一些内容的时候，被部署仓库里不会同步更新的问题
+        rm -rf *
+        cd ..
+
+        cp -rf ./public/* BLOG/
+        cd BLOG
+        # 配置 git
+        git config --global user.name '[你的 GitHub 用户名]'
+        git config --global user.email '[你的邮箱]'
+        git add --all
+        git commit -m "Auto deployment: ${{ github.event.head_commit.message }}
+
+        TIME: $(TZ='Asia/Shanghai' date +"UTC+8 %Y-%m-%d %A %H:%M:%S")"
+        git push --set-upstream "https://[你的 GitHub 用户名]:[你的GitHub Token]@github.com/[你的用户名]/[你的被部署仓库]" main --force

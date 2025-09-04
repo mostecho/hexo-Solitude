@@ -32,6 +32,7 @@
     "hexo-solitude-tag": "^1.0.22",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-wordcount": "^6.0.1",
-    "typeit": "^8.8.7"
+    "typeit": "^8.8.7",
+    "yamljs": "^0.3.0"
   }
 }

@@ -103,8 +103,8 @@ hometop:
       JS:
         img: https://i.postimg.cc/3N10Ltv2/js.png
         color: "#f7cb4f"
-      Docker:
-        img: https://i.postimg.cc/8Pk6Fg24/docker.png
+      github:
+        img: https://bu.dusays.com/2025/04/25/680b3880d3653.png
         color: "#57b6e6"
       Flutter:
         img: https://i.postimg.cc/hPC7T3gB/flutter.png
@@ -115,10 +115,12 @@ hometop:
       Git:
         img: https://i.postimg.cc/nhgjwjCS/git.png
         color: "#df5b40"
+
   group:
     朋友: /links// || fas fa-user-group || linear-gradient(to right,#f65,#ffbf37)
-    随笔: /essay/ || fas fa-book || linear-gradient(to right,#f6a,#f3f)
+    随笔: /essay/ || fas fa-book || linear-gradient(to right,#f6a,#f3f)  
     工具: /tools/ || fas fa-wrench || linear-gradient(to right,#6cf,#3af)
+
   recommendList:
     enable: true
     sup: 置顶
