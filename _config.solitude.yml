@@ -440,7 +440,7 @@ right_menu:
   commentBarrage: true
   # Whether to display the browser's context menu when hold Ctrl key.
   # 是否在按住 Ctrl 键时显示浏览器右键菜单
-  ctrlOriginalMenu: false
+  ctrlOriginalMenu: true
   # Simplified and Traditional Chinese translation.
   # 简繁体转换
   translate: true
@@ -486,7 +486,7 @@ copy:
     enable: true
     # Display when the number of words copied exceeds
     # 复制文字时超过多少字数显示
-    limit: 80
+    limit: 100
 # --------------------------- end ---------------------------
 
 # --------------------------- start ---------------------------
@@ -638,7 +638,7 @@ capsule:
 # 快捷菜单
 # 使用 shift + ? 打开
 keyboard:
-  enable: true
+  enable: false
   list:
     - name: 关闭快捷菜单
       key: K
