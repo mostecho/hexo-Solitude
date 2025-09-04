@@ -787,6 +787,7 @@ extends:
     - <link rel="stylesheet" href="/schedule/schedule.css">
     - <link rel="stylesheet" href="/css/custom.css">
     - <script src="//instant.page/5.2.0" type="module"></script>
+    - <script defer src="https://www.umami.monstecho.top/script.js" data-website-id="a88d93ae-6c6e-46cf-a6cd-5a6a01b0caae"></script>
 
   # Insert in body
   # 插入到 body
