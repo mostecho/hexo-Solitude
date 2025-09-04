@@ -148,6 +148,9 @@ likes:
     tips: 关注偏好
     title: 科技与数码
     subtips: 科技爱好者
+    button: true
+    button_text: 装备
+    button_link: /kit/
   - type: like-music
     bg: https://bu.dusays.com/2025/09/02/68b6ad97b146f.jpg
     tips: 音乐偏好
