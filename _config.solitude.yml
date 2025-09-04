@@ -53,6 +53,7 @@ nav:
       统计: /history/ || fas fa-chart-bar
     社交:
       朋友们: /links/ || fas fa-user-group
+      朋友圈: /fcircle/ || fas fa-comments
       留言板: /message/ || fas fa-book
       最近评论: /recentcomment/ || fas fa-comment-dots
     我的:

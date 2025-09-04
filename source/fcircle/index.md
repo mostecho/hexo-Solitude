@@ -1,15 +1,19 @@
 ---
-title: fcircle
+title: 朋友圈
 date: 2025-09-04 12:51:57
 type: fcircle
+desc: 偷偷看大佬更新的文章
+comment: false
+leftend: ""
+rightbtn: "朋友们"
+rightbtnlink: "/links/"
 ---
-
 <div id="friend-circle-lite-root"></div>
 <script>
     if (typeof UserConfig === 'undefined') {
         var UserConfig = {
             // 填写你的fc Lite地址
-            private_api_url: '此处地址注意替换',
+            private_api_url: 'https://www.fc.monstecho.top/',
             // 点击加载更多时，一次最多加载几篇文章，默认20
             page_turning_number: 24,
             // 头像加载失败时，默认头像地址
