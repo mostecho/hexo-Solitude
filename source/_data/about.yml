@@ -163,6 +163,9 @@ tj: # 统计
   url: https://www.umami.monstecho.top  # 需要到51la官网注册自行获取 or 自行搭建 Heo 的 百度统计项目，填写访问地址即可
   img: https://bu.dusays.com/2025/09/03/68b7ce5262337.webp # 背景
   desc: 本站采用umami自建站统计
+  button: true
+  button_text: "文章统计"
+  button_link: "/history/"
 
 # 个人信息模块
 oneself: # 按需填写

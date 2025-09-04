@@ -780,15 +780,15 @@ extends:
   # Insert in head
   # 插入到 head
   head:
-    - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-    - <script>LA.init({id:"3NJhjjIGsyd5FQ6e",ck:"3NJhjjIGsyd5FQ6e"})</script>
+    # - <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+    # - <script>LA.init({id:"3NJhjjIGsyd5FQ6e",ck:"3NJhjjIGsyd5FQ6e"})</script>
     - <script src="https://cdn.bootcdn.net/ajax/libs/pace/1.2.4/pace.min.js"></script>
     - <script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script>
     - <link rel="stylesheet" href="/schedule/schedule.css">
     - <link rel="stylesheet" href="/css/custom.css">
     - <script src="//instant.page/5.2.0" type="module"></script>
     - <script defer src="https://www.umami.monstecho.top/script.js" data-website-id="a88d93ae-6c6e-46cf-a6cd-5a6a01b0caae"></script>
-
+    - <script src="/js/umami.js"></script>
   # Insert in body
   # 插入到 body
   body:

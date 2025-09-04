@@ -19,39 +19,26 @@ if tj || oneself
                 case tj.provider
                     when '51la'
                         script.
-                            // 使用51LA官方挂件解决CORS问题
-                            document.addEventListener('DOMContentLoaded', function() {
-                                const s = document.getElementById("statistic");
-                                if (s) {
-                                    // 清空容器并添加51LA挂件
-                                    s.innerHTML = '';
-                                    
-                                    // 创建51LA挂件脚本
-                                    var script = document.createElement('script');
-                                    script.id = 'LA-DATA-WIDGET';
-                                    script.crossOrigin = 'anonymous';
-                                    script.charset = 'UTF-8';
-                                    script.src = 'https://v6-widget.51.la/v6/3NJhjjIGsyd5FQ6e/quote.js?theme=#FFFFFF,#333333,#999999,#333333,,#1690FF,14&col=true&f=12&display=0,0,1,1,1,1,1,1';
-                                    
-                                    // 将脚本添加到statistic容器中
-                                    s.appendChild(script);
-                                }
-                            });
-                    when 'custom'
-                        script.
                             fetch("#{tj.url}")
-                                .then(res => res.json())
+                                .then(res => res.text())
                                 .then(data => {
-                                    const title = {"today_uv": "今日人数", "today_pv": "今日访问", "yesterday_uv": "昨日人数", "yesterday_pv": "昨日访问", "last_month_pv": "最近月访问", "last_year_pv": "最近年访问"};
-
-                                    let s = document.getElementById("statistic");
-
-                                    for (let key in data) {
-                                    if (data.hasOwnProperty(key) && title[key]) {
-                                        s.innerHTML += `<div><span>${title[key]}</span><span id="${key}">${data[key]}</span></div>`;
+                                    const title = ["最近活跃", "今日人数", "今日访问", "昨日人数", "昨日访问", "本月访问", "总访问量"];
+                                    let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
+                                    num = num.map(el => {
+                                        let val = el.replace(/(<\/span><span>)/g, "");
+                                        return val.replace(/(<\/span><\/p>)/g, "");
+                                    });
+                                    const s = document.getElementById("statistic");
+                                    let html = '';
+                                    for (let i = 0; i < num.length; i++) {
+                                        if (i === 0 || i === num.length - 1) continue;
+                                        html += `<div><span>${title[i]}</span><span id="${title[i]}">${num[i]}</span></div>`;
                                     }
-                                    }
+                                    s.innerHTML = html;
                                 });
+                    when 'custom'
+                        //- 前端脚本从 Umami 获取数据并填充 #statistic
+                        script(src=url_for('/js/umami.js'))
 
 
         if oneself
