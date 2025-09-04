@@ -2,7 +2,7 @@
 title: 朋友圈
 date: 2025-09-04 12:51:57
 type: fcircle
-cover: "https://bu.dusays.com/2025/04/16/67ff3c3d07c7c.jpg"
+cover: "https://bu.dusays.com/2024/10/05/6700ca14d0ef3.jpg"
 desc: 偷偷看大佬更新的文章
 comment: false
 leftend: ""
