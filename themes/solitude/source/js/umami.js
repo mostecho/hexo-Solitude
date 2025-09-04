@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
             "today_pv": "今日访问",
             "yesterday_uv": "昨日人数",
             "yesterday_pv": "昨日访问",
-            "last_month_pv": "最近月访问",
-            "last_year_pv": "最近年访问"
+            "last_month_pv": "最近一个月访问",
+            "last_year_pv": "最近一年访问"
         };
 
         // 清空容器（防止重复加载时重复添加）
