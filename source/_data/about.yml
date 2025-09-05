@@ -100,6 +100,7 @@ expertise:
   specialist: 菜鸟
   content: 学习能力≈
   level: 1/∞
+  
 
 # 游戏模块
 # 这个模块可以写多个，但最好不要超过 4 个。
@@ -111,7 +112,7 @@ game:
     # icon_group:
     #   - https://7.isyangs.cn/66/6738b472ce11f-66.webp
     #   - https://7.isyangs.cn/66/6738b48045a5b-66.webp
-    tips_right: 是兄弟就来沙城
+    tips_right: 是兄弟就来炙热沙城
   - title: 游戏爱好
     img: https://bu.dusays.com/2025/09/02/68b6aba1c0c1f.jpg
     subtitle: Minecraft
@@ -167,8 +168,8 @@ tj: # 统计
   img: https://bu.dusays.com/2025/09/03/68b7ce5262337.webp # 背景
   desc: 本站采用umami自建站统计
   button: true
-  button_text: "文章统计"
-  button_link: "/history/"
+  button_text: 文章统计
+  button_link: /history/
 
 # 个人信息模块
 oneself: # 按需填写

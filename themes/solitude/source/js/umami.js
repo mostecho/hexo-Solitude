@@ -50,12 +50,12 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(([todayData, yesterdayData, monthData, yearData]) => {
         // 数据处理
         const stats = {
-            'today_uv': todayData.uniques?.value || 0,
-            'today_pv': todayData.pageviews?.value || 0,
-            'yesterday_uv': yesterdayData.uniques?.value || 0,
-            'yesterday_pv': yesterdayData.pageviews?.value || 0,
-            'last_month_pv': monthData.pageviews?.value || 0,
-            'last_year_pv': yearData.pageviews?.value || 0,
+            'today_uv': todayData.visitors?.value || 0,
+            'today_pv': todayData.visits?.value || 0,
+            'yesterday_uv': yesterdayData.visits?.value || 0,
+            'yesterday_pv': yesterdayData.visits?.value || 0,
+            'last_month_pv': monthData.visits?.value || 0,
+            'last_year_pv': yearData.visits?.value || 0,
         };
 
         // 获取显示统计数据的容器
