@@ -134,17 +134,14 @@ hexo_safego:
   scope:                        # 容器与页面设置
     apply_containers:           # 应用的容器选择器
       - '#post'
-      - '#links'
+      - '#article-container'
+      - 'body'
+
     apply_pages:                # 应用的页面路径
-      - "/posts/"
-      - "/tags/"
-      - "/history/"
-      - "/essays/"
-      - "/links/"
-      - "/message/"
-      - "/tools/"
+
     exclude_pages:
-      # - "/about/" 
+       - "/about/" 
+       
   whitelist:                    # 域名白名单
     domain_whitelist:           # 允许的白名单域名，通过字符串匹配实现
       - "mostecho.github.io"

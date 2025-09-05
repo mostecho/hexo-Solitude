@@ -9,6 +9,8 @@ leftend: ""
 rightbtn: "朋友们"
 rightbtnlink: "/links/"
 ---
+
+
 <div id="friend-circle-lite-root"></div>
 <script>
     if (typeof UserConfig === 'undefined') {
