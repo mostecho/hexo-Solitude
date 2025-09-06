@@ -56,6 +56,9 @@ document.addEventListener('DOMContentLoaded', function() {
             'yesterday_pv': yesterdayData.visits?.value || 0,
             'last_month_pv': monthData.visits?.value || 0,
             'last_year_pv': yearData.visits?.value || 0,
+            // 'today_truepv': todayData.pageviews?.value || 0,
+            // 'yesterday_truepv': yesterdayData.pageviews?.value || 0,
+            // 'last_month_truepv': monthData.pageviews?.value || 0,
         };
 
         // 获取显示统计数据的容器
@@ -68,7 +71,10 @@ document.addEventListener('DOMContentLoaded', function() {
             "yesterday_uv": "昨日人数",
             "yesterday_pv": "昨日访问",
             "last_month_pv": "最近一个月访问",
-            "last_year_pv": "最近一年访问"
+            "last_year_pv": "最近一年访问",
+            // "today_truepv": "今日浏览",
+            // "yesterday_truepv": "昨日浏览",
+            // "last_month_truepv": "最近一个月浏览",
         };
 
         // 清空容器（防止重复加载时重复添加）

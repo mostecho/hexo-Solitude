@@ -136,6 +136,7 @@ hexo_safego:
       - '#post'
       - '#article-container'
       - 'body'
+      - 'card'
 
     apply_pages:                # 应用的页面路径
 
