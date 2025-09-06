@@ -9,6 +9,10 @@ leftend: ""
 rightbtn: "关于本站"
 rightbtnlink: "/site/"
 ---
+
+umami访客数据面板
+{% link 'umami数据面板' '访问浏览数据后台' 'https://www.umami.monstecho.top/share/GP13Db5duZos2OX2/www.monstecho.top' %}
+
 <!-- 文章发布时间统计图 -->
 <div id="posts-chart" data-start="2025-01" style="border-radius: 8px; height: 300px; padding: 10px;"></div>
 <!-- 文章标签统计图 -->

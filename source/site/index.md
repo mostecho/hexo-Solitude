@@ -13,10 +13,7 @@ rightbtnlink: "/history/"
 一个编程菜鸟记录生活和学习的小破站，希望你能喜欢。
 
 文章数据分析
-    {% button 'fas fa-chart-bar' '文章统计' '/history/' %}
-
-umami访客数据面板
-{% link 'umami数据面板' '访问浏览数据后台' 'https://www.umami.monstecho.top/share/GP13Db5duZos2OX2/www.monstecho.top' %}
+{% button 'fas fa-chart-bar' '文章统计' '/history/' %}
 
 架构概览
 - 框架：[Hexo](https://hexo.io/zh-cn/)
