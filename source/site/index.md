@@ -41,7 +41,7 @@ rightbtnlink: "/history/"
 这段时间在摸鱼偏多，做过必应，百度收录，魔改过butterfly，也在学习许多新知识 
 {% endtimenode %}
 {% timenode 2025-04-26 %}
-开始更新 EasyX图形库游戏开发系列内容 {% spoiler 'blur' '现已停更' %}
+开始更新 EasyX图形库游戏开发系列内容（现已停更）
 {% endtimenode %}
 {% timenode 2025-04-18 %}
 发表了第一篇文章 个人介绍 {% spoiler 'blur' '现已删除' %}

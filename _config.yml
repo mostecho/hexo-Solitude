@@ -111,7 +111,7 @@ feed:
   enable: true
   type: atom
   path: atom.xml
-  limit: 60
+  limit: 100
   content:
 
 # 文章链接转数字或字母：https://github.com/rozbo/hexo-abbrlink
