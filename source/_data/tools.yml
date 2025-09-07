@@ -7,6 +7,15 @@
         avatar: https://bu.dusays.com/2025/04/25/680b3880d3653.png
         descr: 全球最大的开源网站
 
+      - name: 吾爱破解
+        link: https://www.52pojie.cn/
+        avatar: https://bu.dusays.com/2025/09/07/68bd13cf4be27.gif
+        descr: 关注PC软件安全和移动安全领域，致力于软件安全与病毒分析的前沿。
+
+      - name: 菜鸟教程
+        link: https://www.runoob.com/
+        avatar: https://bu.dusays.com/2025/09/07/68bd13d186a58.png
+        descr: 学的不仅是技术，更是梦想！
 
   - class_name: 工具网站
     class_desc: 能帮得上忙的网站
@@ -21,6 +30,16 @@
         link: https://www.freeconvert.com/zh
         avatar: https://cdn.freeconvert.com/logo_theme.svg
         descr: 免费在线文件格式转换器(支持视频、音频、图片、文档等)
+
+      - name: itdog测速网
+        link: https://www.itdog.cn/
+        avatar: https://bu.dusays.com/2025/09/07/68bd12dc81591.png
+        descr: 为IT运维人员提供实用的工具
+
+      - name: 去不图床
+        link: https://7bu.top/
+        avatar: https://bu.dusays.com/2025/09/07/68bd1509904b6.ico
+        descr: 图床网站，支持上传图片、视频、文件等
 
   - class_name: 更多工具
     class_desc: 如果你还知道哪些实用的工具网站，欢迎在评论区留言。

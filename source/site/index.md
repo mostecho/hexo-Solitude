@@ -18,13 +18,14 @@ rightbtnlink: "/history/"
 架构概览
 - 框架：[Hexo](https://hexo.io/zh-cn/)
 - 主题：[solitude](https://solitude.js.org/cn)
-- 部署：[cloudflare pages](https://www.cloudflare.com/zh-cn/)
+- 主站部署：[vercel](https://vercel.com/)
+- 备用部署：[cloudflare pages](https://www.cloudflare.com/zh-cn/) 
 - 图床：[去不图床](https://7bu.top/)
 - 字体：[得意黑](https://www.fonts.net.cn/font-41693134998.html)
 - 评论：[twikoo](https://twikoo.js.org/)
 - 搜索：[hexo-generator-search](https://github.com/wzpan/hexo-generator-search)
 - 音乐来源：[网易云音乐](https://music.163.com/#/playlist?id=14232307657)
-- 访问统计:[51la](https://v6.51.la/)
+- 访问统计:[umami自建](https://www.umami.monstecho.top/share/GP13Db5duZos2OX2/www.monstecho.top)
 
 ## 本站项目地址
 {% github 'mostecho/hexo-Solitude' %}
