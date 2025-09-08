@@ -1,14 +1,15 @@
 ---
 title: 【C/C++】 size_t和ssize_t的数据类型
-series: 
-date: 2025-09-08 14:14:31
 tags:
   - C++
   - C
   - C标准库
   - 学习日记
-  categories:
+categories:
   - C
+abbrlink: b264
+date: 2025-09-08 14:14:31
+series:
 ---
 
 ## size_t

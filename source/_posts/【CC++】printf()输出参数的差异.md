@@ -1,14 +1,15 @@
 ---
 title: 【C/C++】printf()输出参数的差异
-series: 
-date: 2025-09-08 15:20:39
 tags:
   - C++
   - C
   - C标准库
   - 学习日记
-  categories:
+categories:
   - C
+abbrlink: 516a
+date: 2025-09-08 15:20:39
+series:
 ---
 
 ## printf() 中的 format 格式
