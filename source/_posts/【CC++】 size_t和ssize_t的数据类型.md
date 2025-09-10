@@ -7,6 +7,7 @@ tags:
   - 学习日记
 categories:
   - C
+recommend: true
 abbrlink: b264
 date: 2025-09-08 14:14:31
 series:

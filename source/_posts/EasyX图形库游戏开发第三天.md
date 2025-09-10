@@ -223,9 +223,6 @@ int main()
 ## git仓库配置（额外教程）
 
 
-
-[Git 详细安装教程（详解 Git 安装过程的每一个步骤）git安装-CSDN博客](https://blog.csdn.net/mukes/article/details/115693833)
-
 [Git 分支交互式学习](https://learngitbranching.js.org/)（通过可视化练习掌握分支操作）
 
 [Git 官方文档](https://git-scm.com/doc)

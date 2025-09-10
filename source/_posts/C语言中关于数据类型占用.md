@@ -3,15 +3,16 @@ title: C语言中关于数据类型占用
 tags:
   - C++
   - C
+  - 学习日记
+  - 数据结构
 categories:
-  - C++
   - C
 recommend: true
 abbrlink: 6ea2
 date: 2025-05-07 23:17:50
 ---
 
-# bit、byte、KB、B、字节、位、字符之间关系详解
+## bit、byte、KB、B、字节、位、字符之间关系详解
 
 1. bit就是**位**，也叫**比特位**，是计算机表示数据最小的单位
 
@@ -25,7 +26,7 @@ date: 2025-05-07 23:17:50
 7. **位**就是bit也是b
 8. 转换关系如下：1KB=1024B       1B=8b
 
-## 字符与字节
+### 字符与字节
 
 ASCII码：一个英文字母（不分大小写）占一个**字节**的空间。一个二进制数字序列，在计算机中作为一个数字单元，一般为8位二进制数（二级制数即计算机中的0或1）。换算为十进制 ，最小值-128，最大值127。如一个ASCII码就是一个**字节**
 
@@ -36,7 +37,7 @@ Unicode编码：一个英文**字符**等于两个**字节**，一个中文（�
 B与bit
 数据存储是以**字节**（Byte）为单位，数据传输大多是以**位**（bit，又名“比特”）为单位，一个位就代表一个0或1（即二进制），每8个**位**（bit，简写为b）组成一个**字节**（Byte，简写为B），是最小一级的信息单位。
 
-## B与iB
+### B与iB
 
 1KiB（Kibibyte）=1024byte
 
@@ -48,236 +49,7 @@ B与bit
 
 硬盘生产商是以GB（十进制，即10的3次方=1000，如1MB=1000KB）计算的，而电脑（操作系统）是以GiB（2进制，即2的10次方， 如1MiB=1024KiB）计算的，但是国内用户一般理解为1MiB=1M=1024 KB, 所以为了便于中文化的理解，翻译MiB为MB也是可以的。同样根据硬盘厂商与用户对于1MB大小的不同理解，所以好多160G的硬盘实际容量按计算机实际的1MiB=1024KB算都不到160G，这也可以解释为什么新买的硬盘“缺斤短两”并没有它所标示的那么大。
 
-# C 语言---sizeof的用法总结
-
-[C语言基础——sizeof的用法总结-CSDN博客](https://blog.csdn.net/u013812502/article/details/81198452)
-
-sizeof是C语言中保留关键字，也可以认为是一种**运算符**，单目运算符。常见的使用方式：
-
-```c
-int a=10;
-int arr=[1,2,3];
-char str[]="hello";
-int len_a = sizeof(a);
-int len_arr = sizeof(arr);
-int len_str = sizeof(str)
-
-printf("len_a=%d,len_arr=%d,len_str=%d\n",len_a,len_arr,len_str)
-```
-
-看了上面的代码，一般会认为结果是：len_a=1，len_arr=3，len_str=5
-
-实际上的结果是：len_a=4，len_arr=12，len_str=6
-
-sizeof还可以这么用：
-
-```c
-printf("len_int=%d,len_short=%d,len_double=%d", sizeof(int), sizeof(short), sizeof(double));
-```
-
-获取某个数据类型所占用空间的**字节**数。
-
-再来看另外一段代码：
-
-```c
-#include<stdio.h>
-
-void main(){
-        int a = 10;
-	char b = 'b';
-	short c = 2;
-	long d = 9;
-	float e = 6.29f;
-	double f = 95.0629;
-	int arr[] = { 1,2,3 };
-	char str[] = "hello";
-	double *p=&f;
-	int *i=&a;
-	//分别对各个变量使用sizeof运算
-	printf("a=%d,b=%d,c=%d,d=%d,e=%d,f=%d,arr=%d,str=%d,point_p=%d,point_i=%d\n",
-		sizeof(a), sizeof(b), sizeof(c), sizeof(d), sizeof(e), sizeof(f),
-		sizeof(arr), sizeof(str), sizeof(p), sizeof(i));
-
-	system("pause");
-
-}
-```
-
-**输出的结果是: a=4, b=1,c =2, d=4, e=4, f=8, arr=12, str=6，point_p=4, point_i=4**
-
-看了这些结果，应该也能逆推出来sizeof的含义了吧。
-
-sizeof实际上是获取了数据在内存中所占用的**存储空间**，以**字节**为单位来计数。
-
-C语言会自动在在双引号" "括起来的内容的末尾补上"\0"代表结束，ASCII中的0号位也占用一个字符。
-
-[ASCII码对照表，ASCII码一览表（非常详细） - C语言中文网](https://c.biancheng.net/c/ascii/)
-
-
-
-
-```c
-int arr[]={1,2,3};
-for(int i=0;i<sizeof(arr);i++){
-    printf("%d,",arr[i]);
-}
-```
-
-除了会输出1，2，3以外，还会输出杂乱无章的数字，但一共是输出12个。
-因为数组的内存是动态分配的，到了元素3以后的元素都是新分配的，并不一定是空。
-因为数组是一片连续的空间，有可能元素3的空间是有数据的，那么C语言会将其读取出来，
-当然是一些没有实际意义的杂乱无章的数字，但你不要想着去操作，否则可能导致数据错乱
-所以有可能你运行好几次，后面的值都不会有变化。
-
-改成下面的就没问题了。
-
-```c
-int arr[]={1,2,3};
-for(int i=0;i<(sizeof(arr)/sizeof(int));i++){
-    printf("%d,",arr[i]);
-}
-```
-
-这两段代码的主要区别在于循环条件，导致遍历数组时的行为不同：
-
-**1. 第一个代码段：**
-
-```c
-for(int i=0; i<sizeof(arr); i++)
-```
-- **问题**：sizeof(arr) 返回数组的总字节数（例如，3个int元素的数组在32/64位系统中通常占12字节），而不是元素个数。
-- **结果**：循环次数为数组的总字节数（如12次），导致访问 arr[0] 到 arr[11]（严重越界），引发未定义行为（可能输出垃圾值或崩溃）。
-
-**2. 第二个代码段：**
-
-```c
-for(int i=0; i<(sizeof(arr)/sizeof(int)); i++)
-```
-- **修正**：sizeof(arr)/sizeof(int) 计算实际元素个数（总字节数 ÷ 单个元素字节数）。
-- **结果**：循环次数为3次（正确遍历 arr[0]、arr[1]、arr[2]），安全输出 1,2,3。
-
-**关键区别**：
-
-- 第一个循环错误地用**字节数**作为循环次数，导致越界。
-- 第二个循环用**元素个数**作为循环次数，正确遍历。
-
-**总结**：遍历数组时，应用 sizeof(arr)/sizeof(arr[0]) 动态计算元素数量，避免硬编码和越界问题。
-
-
-
-C/C++中，sizeof()只是**运算符号**，是编译的时候确定大小的。动态分配是运行过程中得到大小的，也就是说C++中new出来的内存，sizeof都无法统计的，退一步说，即使是new出来的空间也有可能失败，所以sizeof无法统计动态分配的内存大小。
-
-例如：
-
-```c
-//使用new关键字，在堆区开辟一个int数组
-int* arr = new int[5]{1,2,3,4,5}; 
-//并不是计算数组arr所占用的内存空间大小，而是计算指针所占内存大小，32位系统指针占4字节，64位系统指针占8字节
-cout << sizeof(arr) << endl;
-//解指针，因为arr指针指向的时数组的首元素，所以实际计算的是int类型的数据所占用内存空间，int类型占4字节
-cout << sizeof(*arr) << endl;
-```
-
-
-
-# C 语言关于sizeof() 和 strlen()区别
-
-[C 语言关于sizeof() 和 strlen()区别 | 菜鸟教程](https://www.runoob.com/w3cnote/c-sizeof-strlen.html)
-
-sizeof() 和 strlen() 在 C 语言中两个非常常用，它们都与计算内存大小有关，但是它们的作用是不同的。
-
-sizeof() 和 strlen() 的主要区别在于：
-
-- sizeof() 是一个运算符，而 strlen() 是一个函数。
-- sizeof() 计算的是变量或类型所占用的内存字节数，而 strlen() 计算的是字符串中字符的个数。
-- sizeof() 可以用于任何类型的数据，而 strlen() 只能用于以空字符 '\0' 结尾的字符串。
-- sizeof() 计算字符串的长度，包含末尾的 '\0'，strlen() 计算字符串的长度，不包含字符串末尾的 '\0'。
-
-sizeof() 函数是一个**运算符**而不是函数，用于计算一个类型或变量所占用的内存字节数。可以用它来获取任何类型的数据的字节数，包括基本数据类型、数组、结构体、共用体等等。
-
-### sizeof()
-
-sizeof() 的使用方法如下：
-
-```c
-sizeof(type)
-sizeof(variable)
-```
-
-参数说明：
-
-- type 是一个类型名
-- variable 是一个变量名
-
-```c
-sizeof(int) *// 输出 4，即整型变量占用 4 个字节
-int x;
-sizeof(x) *// 输出 4，即整型变量 x 占用 4 个字节
-```
-
-sizeof()  计算字符串的长度，包含末尾的 '\0'
-
-```c
-char s[] = "Hello,world!";
-sizeof(s) *// 输出 13，即字符串 s 中有 13 个字符（包括结尾的空字符 '\0'）
-```
-
-
-
-### strlen()
-
-strlen() 函数用于计算一个字符串的长度，即它所包含的字符个数（不包括字符串结尾的空字符 '\0'）。
-
-需要注意的是，strlen() 函数只能用于计算以空字符 '\0' 结尾的字符串的长度，如果字符串中没有空字符，则 strlen() 函数的行为是未定义的。
-
-strlen() 的使用方法如下：
-
-```c
-strlen(string)
-```
-
-其中 string 是一个以空字符 '\0' 结尾的字符串，但是计算字符串的长度，不包含末尾的 '\0'。例如：
-
-```c
-char s[] = "Hello, world!";
-strlen(s) *// 输出 13，即字符串 s 中有 13 个字符（不包括结尾的空字符 '\0'）
-```
-
-### 实例
-
-以下是关于 sizeof() 和 strlen() 区别的完整实例：
-
-```c
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-
-void msg()
-{
-  char s[] = "Hello, world!";
-  printf("s = %s\n", s);
-  printf("sizeof(s) = %d\n", sizeof(s));
-  printf("strlen(s) = %d\n", strlen(s));
-}
-
-int main(int argc, char* argv[], char* envp[])
-{
-  msg();
-  return 0;
-}
-```
-
-输出结果为：
-
-```c
-s = Hello, world!
-sizeof(s) = 14
-strlen(s) = 13
-```
-
-
-
-# C语言各种基本数据类型字节大小和取值范围
+## C语言各种基本数据类型字节大小和取值范围
 
 [C语言各种基本数据类型字节大小和取值范围](https://config.net.cn/tools/basic-data-types-and-value-ranges-of-c.html)
 
@@ -287,7 +59,7 @@ strlen(s) = 13
 - 如何知道当前编译环境下c语言中的基本数据类型的占用字节大小呢？ 举例：sizeof(int)即可获取int类型的字节占用大小
 - 如何知道当前编译环境下c语言中的基本数据的取值范围呢？ 基于极限值符号（极限值符号在limits.h头文件中有定义)获得,CHAR_MIN, CHAR_MAX代表char的min和max值
 
-## 基本数据类型
+### 基本数据类型
 
 **1.1.有符号整数类型(signed)**
 
@@ -354,6 +126,45 @@ strlen(s) = 13
 第一bit 0用于表示符号（正负），剩下的31bit用于决定数字，int类型的取值范围就为 -2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)
 
 那么为什么后面是2 147 483 647而不是2 147 483 648，因为还有一个0，-2 147 483 648 ~ 0 ~ 2 147 483 647
+
+### uint8_t / uint16_t / uint32_t /uint64_t的来源和作用
+
+[C语言数据类型及typedef下的uint8_t / uint32_t_typedef uint8-CSDN博客](https://blog.csdn.net/m0_64770246/article/details/124209343)
+
+#### 来源
+
+在基于C语言的代码中总能看到uint8_t / uint16_t / uint32_t /uint64_t的身影。如：uint32_t a = 300;
+但它似乎又不属于C语言中的6种基本数据类型（short、int、long、char、float、double），那么它是一种**新的数据类型**？
+
+
+
+*_t表示该标识由typedef定义得到，是结构的一种标注。C语言代码中的uint8_t / uint16_t / uint32_t /uint64_t都不是新的数据类型，而是通过typedef给数据类型起得新名字，如：
+
+```c
+typedef signed char             int8_t;
+typedef short int               int16_t;
+typedef int                     int32_t;
+```
+
+#### 作用
+1.增加代码的可读性
+uint8_t,uint32_t能更明显的显示所占字节数。
+uint8_t表示占1个字节(1 字节=8 bit)；
+uint32_t表示占4个字节(4 字节=32 bit)。
+
+2.增加代码的可维护性
+在涉及到跨平台时，不同的平台会有不同的字长，所以利用预编译和typedef可以方便的维护代码。
+
+注：uint8_t实际上就是一个char，所以输出 uint8_t类型的变量实际上输出对应的字符，而不是数值，如：
+
+```c
+uint8_t  num=67;
+cout << num << endl;		//输出结果为C
+```
+
+#### 总结
+
+ **uint8_t / uint16_t / uint32_t /uint64_t不是新的数据类型，而是通过typedef给数据类型起的新名字**
 
 ## 其他数据类型
 
@@ -450,5 +261,140 @@ ColorType被显式定义为 uint8_t（1字节无符号整数），确保固定�
 
 这种方法可以让你更精确地控制枚举值的大小和类型，但代价是失去了一些 enum 提供的类型安全性和可读性。
 
-
 总之，enum 在C语言中的大小和底层类型可能会因编译器和平台而异。大多数情况下，它会被实现为 int 类型并占用 4 字节，但这并不是绝对的。在编写跨平台或对内存布局敏感的代码时，建议使用 sizeof 运算符来确定实际大小，并考虑使用固定大小的整数类型来获得更可预测的行为。
+
+### 结构体类型
+
+[揭秘C语言struct大小之谜：深度解析结构体内存占用与布局优化 - 云原生实践](https://www.oryoy.com/news/jie-mi-c-yu-yan-struct-da-xiao-zhi-mi-shen-du-jie-xi-jie-gou-ti-nei-cun-zhan-yong-yu-bu-ju-you-hua.html#:~:text=本文将深入解析C语言中结构体的内存占用与布局优化，帮助开发者更好地理解和利用结构体。 结构体的内存占用首先取决于其成员数据类型的大小。 在C语言中，每个数据类型都有其固定的字节大小。 例如，一个 int,类型通常占用4字节，一个 float 类型占用4字节，一个 char 类型占用1字节。 在C语言中，结构体成员的内存占用还会受到成员对齐的影响。)
+
+#### 前言
+
+在C语言编程中，结构体（struct）是一种非常重要的数据类型，它允许我们将多个不同类型的数据组合成一个单一的数据结构。然而，结构体的大小并不是固定的，其大小受多种因素影响，如数据类型的大小、成员的排列顺序等。本文将深入解析C语言中结构体的内存占用与布局优化，帮助开发者更好地理解和利用结构体。
+
+#### 数据类型大小
+
+结构体的内存占用首先取决于其成员数据类型的大小。在C语言中，每个数据类型都有其固定的字节大小。例如，一个`int`类型通常占用4字节，一个`float`类型占用4字节，一个`char`类型占用1字节。
+
+#### 成员对齐
+
+在C语言中，结构体成员的内存占用还会受到成员对齐的影响。编译器会根据编译器选项和目标平台的硬件要求，对结构体成员进行对齐。常见的对齐方式包括：
+
+- **字节对齐**：成员的起始地址是其类型大小的整数倍。
+- **半字节对齐**：成员的起始地址是其类型大小的一半的整数倍。
+- **双字节对齐**：成员的起始地址是其类型大小的两倍的整数倍。
+
+例如，以下结构体：
+
+```c
+struct Example {
+    int a;
+    float b;
+};
+```
+
+如果使用字节对齐，那么`float`类型的`b`成员将会占用4字节，起始地址为4的整数倍。由于`int`类型的`a`成员占用4字节，因此整个结构体的内存占用为8字节。
+
+| a    | a    | a    | a    |
+| ---- | ---- | ---- | ---- |
+| b    | b    | b    | b    |
+| 空   | 空   | 空   | 空   |
+
+#### 例子分析
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Example {
+    int a;
+    float b;
+};
+
+int main() {
+    struct Example ex;
+    printf("Size of struct Example: %zu bytes\n", sizeof(ex));
+    return 0;
+}
+```
+
+输出结果为：
+
+```c
+Size of struct Example: 8 bytes
+```
+
+这符合我们的分析，结构体`Example`的大小为8字节。
+
+
+
+下面再来举一个例子，大家觉得下面这个结构体变量data占多少字节？
+
+ ```c
+  struct STUDENT
+  {
+   	char a;
+   	char b;
+   	char c;
+   	char d;
+   	char e;
+  	int f;
+  }data;
+ ```
+
+ 首先最长的数据类型占 4 字节，所以是以 4 对齐。然后 a 占 1 字节，b 接在 a 后面占 1 字节，c 接在 b 后面占 1 字节，d 接在 c 后面占 1 字节，此时满 4 字节了，e 再来就要另起一行。f 想紧接着 e 后面分配，但 e 后面还剩 3 字节，小于 int 类型的 4 字节，所以 f 另起一行。即该结构体变量分配内存时如下：
+
+| a    | b    | c    | d    |
+| ---- | ---- | ---- | ---- |
+| e    | 空   | 空   | 空   |
+| f    | f    | f    | f    |
+
+即总共占 12 字节。
+
+
+
+### 结构体布局优化
+
+#### 顺序优化
+
+为了减少结构体的内存占用，我们可以调整成员的顺序。将较小的成员放在前面，可以减少对齐开销，从而减小整个结构体的内存占用。
+
+#### 联合体使用
+
+在某些情况下，可以使用联合体（union）来减少内存占用。联合体允许存储多个数据类型在同一个内存地址，但任何时刻只能存储一个类型的数据。
+
+**例子分析**
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Example {
+    int a;
+    float b;
+};
+
+union ExampleOptimized {
+    int a;
+    float b;
+};
+
+int main() {
+    printf("Size of struct Example: %zu bytes\n", sizeof(struct Example));
+    printf("Size of union ExampleOptimized: %zu bytes\n", sizeof(union ExampleOptimized));
+    return 0;
+}
+```
+
+输出结果为：
+
+```c
+Size of struct Example: 8 bytes
+Size of union ExampleOptimized: 4 bytes
+```
+
+这表明通过调整成员顺序和使用联合体，我们可以有效地减小结构体的内存占用。
+
+#### 总结
+
+本文深入解析了C语言中结构体的内存占用与布局优化。通过了解数据类型大小、成员对齐以及顺序优化等概念，我们可以更好地控制结构体的内存占用，从而提高程序的性能和效率。在实际开发过程中，开发者应结合具体需求，合理运用结构体，以达到最佳效果。
+

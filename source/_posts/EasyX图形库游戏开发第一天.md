@@ -136,7 +136,7 @@ void startloadImg();
 #include "game.h"  //导入头文件
 ```
 
-
+xxxxxxxxxx //使用new关键字，在堆区开辟一个int数组int* arr = new int[5]{1,2,3,4,5}; //并不是计算数组arr所占用的内存空间大小，而是计算指针所占内存大小，32位系统指针占4字节，64位系统指针占8字节cout << sizeof(arr) << endl;//解指针，因为arr指针指向的时数组的首元素，所以实际计算的是int类型的数据所占用内存空间，int类型占4字节cout << sizeof(*arr) << endl;c
 
 下面是我的代码
 

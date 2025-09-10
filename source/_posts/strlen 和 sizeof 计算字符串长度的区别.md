@@ -5,6 +5,7 @@ tags:
   - C
   - C标准库
   - 学习日记
+  - 数据结构
 categories:
   - C
 recommend: true
@@ -17,9 +18,100 @@ series:
 
 首先，strlen() 是**函数**(C库函数 - strlen())，sizeof 是**运算操作符**，二者得到的结果类型为 size_t(64位系统上即 long unsigned int类型)。大部分编译程序在编译的时候就把 sizeof 计算过了，而 strlen 的结果要在运行的时候才能计算出来。
 
- 
+## C 语言关于sizeof() 和 strlen()区别
 
-## 代码计算比较
+[C 语言关于sizeof() 和 strlen()区别 | 菜鸟教程](https://www.runoob.com/w3cnote/c-sizeof-strlen.html)
+
+sizeof() 和 strlen() 的主要区别在于：
+
+- sizeof() 是一个运算符，而 strlen() 是一个函数。
+- sizeof() 计算的是变量或类型所占用的内存字节数，而 strlen() 计算的是字符串中字符的个数。
+- sizeof() 可以用于任何类型的数据，而 strlen() 只能用于以空字符 '\0' 结尾的字符串。
+- sizeof() 计算字符串的长度，包含末尾的 '\0'，strlen() 计算字符串的长度，不包含字符串末尾的 '\0'。
+
+sizeof() 函数是一个**运算符**而不是函数，用于计算一个类型或变量所占用的内存字节数。可以用它来获取任何类型的数据的字节数，包括基本数据类型、数组、结构体、共用体等等。
+
+### sizeof()
+
+sizeof() 的使用方法如下：
+
+```c
+sizeof(type)
+sizeof(variable)
+```
+
+参数说明：
+
+- type 是一个类型名
+- variable 是一个变量名
+
+```c
+sizeof(int) *// 输出 4，即整型变量占用 4 个字节
+int x;
+sizeof(x) *// 输出 4，即整型变量 x 占用 4 个字节
+```
+
+sizeof()  计算字符串的长度，包含末尾的 '\0'
+
+```c
+char s[] = "Hello,world!";
+sizeof(s) *// 输出 13，即字符串 s 中有 13 个字符（包括结尾的空字符 '\0'）
+```
+
+### strlen()
+
+strlen() 函数用于计算一个字符串的长度，即它所包含的字符个数（不包括字符串结尾的空字符 '\0'）。
+
+需要注意的是，strlen() 函数只能用于计算以空字符 '\0' 结尾的字符串的长度，如果字符串中没有空字符，则 strlen() 函数的行为是未定义的。
+
+strlen() 的使用方法如下：
+
+```c
+strlen(string)
+```
+
+其中 string 是一个以空字符 '\0' 结尾的字符串，但是计算字符串的长度，不包含末尾的 '\0'。例如：
+
+```c
+char s[] = "Hello, world!";
+strlen(s) *// 输出 13，即字符串 s 中有 13 个字符（不包括结尾的空字符 '\0'）
+```
+
+### 实例
+
+以下是关于 sizeof() 和 strlen() 区别的完整实例：
+
+```c
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+void msg()
+{
+  char s[] = "Hello, world!";
+  printf("s = %s\n", s);
+  printf("sizeof(s) = %d\n", sizeof(s));
+  printf("strlen(s) = %d\n", strlen(s));
+}
+
+int main(int argc, char* argv[], char* envp[])
+{
+  msg();
+  return 0;
+}
+```
+
+输出结果为：
+
+```c
+s = Hello, world!
+sizeof(s) = 14
+strlen(s) = 13
+```
+
+
+
+### 代码计算比较
 
 对于以下语句：
 
@@ -61,19 +153,20 @@ strlen(str4)=2
 
 str1 是字符指针变量，sizeof 获得的是该指针所占的地址空间，64 位[操作系统](http://lib.csdn.net/base/operatingsystem)对应 8 字节，所以结果是 8（32 位[操作系统](http://lib.csdn.net/base/operatingsystem)对应 4 字节，所以结果是 4）；strlen 返回的是该字符串的长度，遇到’\0’结束，’\0’本身不计算在内，故结果是 6。
 
-str2 是字符数组，大小由字符串常量”asdfgh” 确定，sizeof 获得该数组所占内存空间大小，包括字符串结尾的’\0’，所以结果为 7；strlen 同理返回 6。
+xxxxxxxxxx //使用new关键字，在堆区开辟一个int数组int* arr = new int[5]{1,2,3,4,5}; //并不是计算数组arr所占用的内存空间大小，而是计算指针所占内存大小，32位系统指针占4字节，64位系统指针占8字节cout << sizeof(arr) << endl;//解指针，因为arr指针指向的时数组的首元素，所以实际计算的是int类型的数据所占用内存空间，int类型占4字节cout << sizeof(*arr) << endl;c
 
 str3 也是字符数组，但大小确定为 8，故 sizeof 得到的结果是 8；strlen 统计’\0’之前所有字符的个数，即为 3；
 
 str4 是常量字符数组，sizeof 得到字符总数即 6；strlen 计算至’\0’结束，因此返回 2；
 
-## 总结:
+### 总结:
 
 sizeof 计算的是变量的大小，不受字符’\0’影响。
 strlen 计算的是字符串的实际长度，以’\0’作为长度判定依据，遇到’\0’就停止，长度不包括’\0’。
 
 
 
-原文链接:
+参考：
 
 - https://geekdaxue.co/read/ixxw@cpp/strlen_sizeof
+- https://www.runoob.com/w3cnote/c-sizeof-strlen.html
