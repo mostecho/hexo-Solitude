@@ -94,7 +94,7 @@ void main(){
 	double *p=&f;
 	int *i=&a;
 	//分别对各个变量使用sizeof运算
-	printf("a=%d,b=%d,c=%d,d=%d,e=%d,f=%d,arr=%d,str=%d point_p=%d,point_i=%d\n",
+	printf("a=%d,b=%d,c=%d,d=%d,e=%d,f=%d,arr=%d,str=%d,point_p=%d,point_i=%d\n",
 		sizeof(a), sizeof(b), sizeof(c), sizeof(d), sizeof(e), sizeof(f),
 		sizeof(arr), sizeof(str), sizeof(p), sizeof(i));
 
@@ -103,11 +103,11 @@ void main(){
 }
 ```
 
-**输出的结果是:a=4,b=1,c=2,d=4,e=4,f=8,arr=12,str=6 point_p=4,point_i=4**
+**输出的结果是: a=4, b=1,c =2, d=4, e=4, f=8, arr=12, str=6，point_p=4, point_i=4**
 
 看了这些结果，应该也能逆推出来sizeof的含义了吧。
 
-sizeof实际上是获取了数据在内存中所占用的存储空间，以字节为单位来计数。
+sizeof实际上是获取了数据在内存中所占用的**存储空间**，以**字节**为单位来计数。
 
 C语言会自动在在双引号" "括起来的内容的末尾补上"\0"代表结束，ASCII中的0号位也占用一个字符。
 
@@ -145,23 +145,23 @@ for(int i=0;i<(sizeof(arr)/sizeof(int));i++){
 ```c
 for(int i=0; i<sizeof(arr); i++)
 ```
-- **问题**：`sizeof(arr)` 返回数组的总字节数（例如，3个int元素的数组在32/64位系统中通常占12字节），而不是元素个数。
-- **结果**：循环次数为数组的总字节数（如12次），导致访问 `arr[0]` 到 `arr[11]`（严重越界），引发未定义行为（可能输出垃圾值或崩溃）。
+- **问题**：sizeof(arr) 返回数组的总字节数（例如，3个int元素的数组在32/64位系统中通常占12字节），而不是元素个数。
+- **结果**：循环次数为数组的总字节数（如12次），导致访问 arr[0] 到 arr[11]（严重越界），引发未定义行为（可能输出垃圾值或崩溃）。
 
 **2. 第二个代码段：**
 
 ```c
 for(int i=0; i<(sizeof(arr)/sizeof(int)); i++)
 ```
-- **修正**：`sizeof(arr)/sizeof(int)` 计算实际元素个数（总字节数 ÷ 单个元素字节数）。
-- **结果**：循环次数为3次（正确遍历 `arr[0]`、`arr[1]`、`arr[2]`），安全输出 `1,2,3`。
+- **修正**：sizeof(arr)/sizeof(int) 计算实际元素个数（总字节数 ÷ 单个元素字节数）。
+- **结果**：循环次数为3次（正确遍历 arr[0]、arr[1]、arr[2]），安全输出 1,2,3。
 
 **关键区别**：
 
 - 第一个循环错误地用**字节数**作为循环次数，导致越界。
 - 第二个循环用**元素个数**作为循环次数，正确遍历。
 
-**总结**：遍历数组时，应用 `sizeof(arr)/sizeof(arr[0])` 动态计算元素数量，避免硬编码和越界问题。
+**总结**：遍历数组时，应用 sizeof(arr)/sizeof(arr[0]) 动态计算元素数量，避免硬编码和越界问题。
 
 
 
@@ -199,7 +199,7 @@ sizeof() 函数是一个**运算符**而不是函数，用于计算一个类型�
 
 sizeof() 的使用方法如下：
 
-```
+```c
 sizeof(type)
 sizeof(variable)
 ```
@@ -218,8 +218,8 @@ sizeof(x) *// 输出 4，即整型变量 x 占用 4 个字节
 sizeof()  计算字符串的长度，包含末尾的 '\0'
 
 ```c
-char s[] = "Hello, world!";
-sizeof(s) *// 输出 14，即字符串 s 中有 14 个字符（包括结尾的空字符 '\0'）
+char s[] = "Hello,world!";
+sizeof(s) *// 输出 13，即字符串 s 中有 13 个字符（包括结尾的空字符 '\0'）
 ```
 
 
@@ -232,7 +232,7 @@ strlen() 函数用于计算一个字符串的长度，即它所包含的字符�
 
 strlen() 的使用方法如下：
 
-```
+```c
 strlen(string)
 ```
 
@@ -255,9 +255,9 @@ strlen(s) *// 输出 13，即字符串 s 中有 13 个字符（不包括结尾�
 void msg()
 {
   char s[] = "Hello, world!";
-  printf("s = %s**\n**", s);
-  printf("sizeof(s) = %d**\n**", sizeof(s));
-  printf("strlen(s) = %d**\n**", strlen(s));
+  printf("s = %s\n", s);
+  printf("sizeof(s) = %d\n", sizeof(s));
+  printf("strlen(s) = %d\n", strlen(s));
 }
 
 int main(int argc, char* argv[], char* envp[])
@@ -359,8 +359,6 @@ strlen(s) = 13
 
 ### 枚举类型
 
-
-
 [C语言enum占几个字节？它在底层是哪种整数类型？ - C语言中文网](https://c.biancheng.net/view/kblsiom.html)
 
 [C语言枚举类型占几个字节？（非常详细） - C语言中文网](https://c.biancheng.net/view/3tt1i73.html)
@@ -448,7 +446,7 @@ typedef uint8_t ColorType;
 
 [C语言数据类型及typedef下的uint8_t / uint32_t_typedef uint8-CSDN博客](https://blog.csdn.net/m0_64770246/article/details/124209343)
 
-ColorType被显式定义为 `uint8_t`（1字节无符号整数），确保固定内存占用
+ColorType被显式定义为 uint8_t（1字节无符号整数），确保固定内存占用
 
 这种方法可以让你更精确地控制枚举值的大小和类型，但代价是失去了一些 enum 提供的类型安全性和可读性。
 
