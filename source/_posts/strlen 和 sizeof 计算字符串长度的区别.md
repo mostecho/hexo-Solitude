@@ -7,6 +7,7 @@ tags:
   - 学习日记
 categories:
   - C
+recommend: true
 abbrlink: 4f10
 date: 2025-09-08 15:00:05
 series:
@@ -22,14 +23,40 @@ series:
 
 对于以下语句：
 
-```
-#include <stdio.h>#include <string.h>int main(){    char *str1 = "asdfgh";    char str2[] = "asdfgh";    char str3[8] = { 'a', 's', 'd' };    char str4[] = "as\0df";    printf("sizeof(str1)=%lu\n", sizeof(str1));    printf("strlen(str1)=%lu\n", strlen(str1));    printf("sizeof(str2)=%lu\n", sizeof(str2));    printf("strlen(str2)=%lu\n", strlen(str2));    printf("sizeof(str3)=%lu\n", sizeof(str3));    printf("strlen(str3)=%lu\n", strlen(str3));    printf("sizeof(str4)=%lu\n", sizeof(str4));    printf("strlen(str4)=%lu\n", strlen(str4));    return 0;}
+```cpp
+#include <stdio.h>
+#include <string.h>
+int main(){    
+  char *str1 = "asdfgh";    
+  char str2[] = "asdfgh";   
+  char str3[8] = { 'a', 's', 'd' };    
+  char str4[] = "as\0df";    
+  printf("sizeof(str1)=%lu\n", sizeof(str1));    
+  printf("strlen(str1)=%lu\n", strlen(str1));    
+  printf("sizeof(str2)=%lu\n", sizeof(str2));    
+  printf("strlen(str2)=%lu\n", strlen(str2));    
+  printf("sizeof(str3)=%lu\n", sizeof(str3));    
+  printf("strlen(str3)=%lu\n", strlen(str3));    
+  printf("sizeof(str4)=%lu\n", sizeof(str4));    
+  printf("strlen(str4)=%lu\n", strlen(str4));    
+  return 0;
+  }
 ```
 
 执行结果是(注意，结果与操作系统位数有关，下面以ubuntu 64位为例)：
 
-```
-sizeof(str1)=8strlen(str1)=6sizeof(str2)=7strlen(str2)=6sizeof(str3)=8strlen(str3)=3sizeof(str4)=6strlen(str4)=2
+```cpp
+sizeof(str1)=8
+strlen(str1)=6
+
+sizeof(str2)=7
+strlen(str2)=6
+
+sizeof(str3)=8
+strlen(str3)=3
+
+sizeof(str4)=6
+strlen(str4)=2
 ```
 
 str1 是字符指针变量，sizeof 获得的是该指针所占的地址空间，64 位[操作系统](http://lib.csdn.net/base/operatingsystem)对应 8 字节，所以结果是 8（32 位[操作系统](http://lib.csdn.net/base/operatingsystem)对应 4 字节，所以结果是 4）；strlen 返回的是该字符串的长度，遇到’\0’结束，’\0’本身不计算在内，故结果是 6。

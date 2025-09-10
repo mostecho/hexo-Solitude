@@ -7,6 +7,7 @@ tags:
   - 学习日记
 categories:
   - C
+recommend: true
 abbrlink: 516a
 date: 2025-09-08 15:20:39
 series:
