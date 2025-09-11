@@ -9,6 +9,7 @@ tags:
 categories:
   - C
 recommend: true
+abbrlink: f26d
 date: 2025-09-10 21:00:05
 series:
 ---
