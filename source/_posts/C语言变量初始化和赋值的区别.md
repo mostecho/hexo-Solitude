@@ -109,4 +109,3 @@ struct Point p = {.y = 5, .x = 10};  // 顺序可以任意
 参考：
 
 - [变量初始化和不初始化-阿里云开发者社区](https://developer.aliyun.com/article/1341828)
-- 
