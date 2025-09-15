@@ -1,6 +1,5 @@
 ---
 title: 【C/C++】C++中的string、char、char*和char**区别与联系
-series: 
 tags:
   - C++
   - C
@@ -9,7 +8,9 @@ tags:
 categories:
   - C++
 recommend: true
+abbrlink: 6aff
 date: 2025-09-11 16:03:31
+series:
 ---
 
 ## 前言
