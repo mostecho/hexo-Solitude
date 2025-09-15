@@ -16,7 +16,7 @@ series:
 
 ## 前言
 
-首先，strlen() 是**函数**(C库函数 - strlen())，sizeof 是**运算操作符**，二者得到的结果类型为 size_t(64位系统上即 long unsigned int类型)。大部分编译程序在编译的时候就把 sizeof 计算过了，而 strlen 的结果要在运行的时候才能计算出来。
+首先，strlen() 是**函数**(C库函数 - strlen()来自于C 标准库 - <string.h>)，sizeof 是**运算操作符**，二者得到的结果类型为 size_t(64位系统上即 long unsigned int类型)。大部分编译程序在编译的时候就把 sizeof 计算过了，而 strlen 的结果要在运行的时候才能计算出来。
 
 ## C 语言关于sizeof() 和 strlen()区别
 
