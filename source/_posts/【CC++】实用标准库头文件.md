@@ -101,8 +101,6 @@ vector 是 C++ 标准模板库（STL）的一部分，提供了灵活的接口�
 
 
 
-
-
 ## C++ string 标准库
 
 [C++ 标准库  | 菜鸟教程](https://www.runoob.com/cplusplus/cpp-libs-string.html)
@@ -462,6 +460,8 @@ string字符串不能直接赋值（初始化可以），因为**string**实际�
 
 **以下内容都为deepseek总结，请仔细辨别内容正确与否**
 
+
+
 ### C语言中的特点
 
 在 C 语言中，`string.h` 头文件处理的是 **以 null 字符结尾的字符数组**，这个概念需要准确理解.
@@ -543,6 +543,8 @@ char buffer[100] = "This can be modified";
 ```
 
 在 C 语言中，理解字符串就是理解 **字符数组、指针和内存管理** 的相互关系。
+
+
 
 ### C++中的特点
 
