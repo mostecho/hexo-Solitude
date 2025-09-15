@@ -4,7 +4,7 @@
         .swiper-wrapper#bber-talk
             each item, i in site.data.brevity.slice(0, 10)
                 .li-style.swiper-slide
-                    | #{item.content}
+                    | #{item.content.replace(/<[^>]*>/g, '')}
                     if item.image
                         i.solitude.fas.fa-image
                     else if item.aplayer

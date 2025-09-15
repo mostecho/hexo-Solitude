@@ -16,7 +16,7 @@ if theme.brevity.enable
                                         i.solitude.fas.fa-comment
 
                         #bber-content
-                            p.datacont= item.content
+                            p.datacont!= item.content
                             if item.image
                                 .bber-content-img
                                     each img in item.image

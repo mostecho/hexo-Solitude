@@ -4,6 +4,17 @@
 - content: 终于弄明白了指针，过两天就更新关于指针的文章，课太多了，先鸽一鸽。
   date: 2025-09-11 19:00
 
+- content: so i step up （所以我向前迈步）<br>
+          当生活变得斑驳 <br>
+          every time i step up （每当我向前迈步）<br>
+          哪怕勇气很单薄 <br>
+          心无旁骛 在漫漫长路上 <br>
+          别用别人的眼睛 丈量你面前的山坡 <br>
+  date: 2025-09-15 23:44
+  aplayer:
+    server: netease # 音乐服务商，如netease
+    id: 2076446373 # 单曲id，不了解具体查看方法建议询问搜索引擎
+
 # - content: B站视频短文
 #   date: 2025-01-01 00:00
 #   video:
@@ -16,7 +27,7 @@
 #   date: 2025-01-01 00:00
 #   aplayer:
 #     server: netease # 音乐服务商，如netease
-#     id: 1426724753 # 单曲id，不了解具体查看方法建议询问搜索引擎
+#     id: 2076446373 # 单曲id，不了解具体查看方法建议询问搜索引擎
 # - content: 图片短文（无图片描述）
 #   date: 2025-01-01 00:00
 #   image:
