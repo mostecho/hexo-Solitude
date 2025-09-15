@@ -1,5 +1,6 @@
 ---
 title: sizeof的用法总结
+cover: https://bu.dusays.com/2025/09/16/68c8524bc38b1.png
 tags:
   - C++
   - C

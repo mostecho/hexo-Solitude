@@ -1,5 +1,6 @@
 ---
 title: strlen 和 sizeof 计算字符串长度的区别
+cover: https://bu.dusays.com/2025/09/16/68c8524bc38b1.png
 tags:
   - C++
   - C

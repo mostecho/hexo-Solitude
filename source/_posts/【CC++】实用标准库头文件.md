@@ -1,5 +1,6 @@
 ---
 title: 【C/C++】实用标准库头文件
+cover: https://bu.dusays.com/2025/09/16/68c8516846180.jpg
 tags:
   - C++
   - C

@@ -1,12 +1,13 @@
 ---
 title: C语言变量初始化和赋值的区别
+cover: https://bu.dusays.com/2025/09/16/68c8524bc38b1.png
 tags:
   - C++
   - C
   - C标准库
   - 学习日记
 categories:
-  - C++
+  - C
 recommend: true
 abbrlink: be92
 date: 2025-09-10 22:30:10

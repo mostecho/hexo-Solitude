@@ -1,5 +1,6 @@
 ---
 title: C语言中关于数据类型占用
+cover: https://bu.dusays.com/2025/09/16/68c8524bc38b1.png
 tags:
   - C++
   - C
