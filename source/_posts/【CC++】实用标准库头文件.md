@@ -1,6 +1,5 @@
 ---
 title: 【C/C++】实用标准库头文件
-cover: https://bu.dusays.com/2025/09/16/68c8516846180.jpg
 tags:
   - C++
   - C
@@ -10,7 +9,6 @@ tags:
 categories:
   - C++
 recommend: true
-abbrlink: 7bed
 date: 2025-09-15 14:20:05
 series:
 ---
@@ -218,7 +216,7 @@ C++ 是一种功能强大的编程语言，它提供了丰富的标准库来帮�
 
 `new` 运算符用于在堆上分配内存。其基本语法如下：
 
-```
+```cpp
 <code class="language-cpp">pointer new (type [, initializer]);</code>
 ```
 
@@ -230,7 +228,7 @@ C++ 是一种功能强大的编程语言，它提供了丰富的标准库来帮�
 
 `delete` 运算符用于释放之前使用 `new` 分配的内存。其基本语法如下：
 
-```
+```cpp
 <code class="language-cpp">delete pointer;</code>
 ```
 
@@ -284,7 +282,7 @@ C++ 标准库提供了丰富的功能，其中 `<cmath>` 是一个包含数学�
 
 要使用 `<cmath>` 中的函数，你需要在你的 C++ 程序中包含这个头文件：
 
-```
+```cpp
 #include <cmath>
 ```
 
