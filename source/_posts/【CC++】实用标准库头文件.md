@@ -1,5 +1,6 @@
 ---
 title: 【C/C++】实用标准库头文件
+cover: https://bu.dusays.com/2025/09/16/68c8516846180.jpg
 tags:
   - C++
   - C
@@ -9,6 +10,7 @@ tags:
 categories:
   - C++
 recommend: true
+abbrlink: 7bed
 date: 2025-09-15 14:20:05
 series:
 ---
@@ -654,7 +656,7 @@ std::string s2(cstr, 3);        // "Hel"
 // std::string 是一个管理字符序列的智能对象 ✅
 ```
 
-**简单来说：** `std::string` 最接近的是 "**一个自动管理的、功能丰富的、类型安全的动态字符数组包装器**"。
+**简单来说：** `std::string` 最接近的是 **"一个自动管理的、功能丰富的、类型安全的动态字符数组包装器"**。
 
 
 
