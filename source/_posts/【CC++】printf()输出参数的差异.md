@@ -1,6 +1,6 @@
 ---
 title: 【C/C++】printf()输出参数的差异
-cover: https://bu.dusays.com/2025/09/16/68c8524bc38b1.png
+cover: https://bu.dusays.com/2025/09/16/68c9730418e7b.webp
 tags:
   - C++
   - C
