@@ -1,6 +1,5 @@
 ---
 title: EasyX图形库游戏开发第二天
-series: EasyX图形库游戏开发
 cover: https://bu.dusays.com/2025/09/16/68c83fc27f316.png
 tags:
   - C++

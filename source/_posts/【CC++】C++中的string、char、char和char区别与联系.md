@@ -11,7 +11,6 @@ categories:
 recommend: true
 abbrlink: 6aff
 date: 2025-09-11 16:03:31
-series:
 ---
 
 ## 前言
@@ -478,9 +477,9 @@ puts(p);    //输出结果为hello
 
 char * p="hello"; 双引号在这里做了这三件事情：
 
-- 1. 申请了空间(在常量区)，存放了字符串
-- 2. 在字符串尾加上了'/0'   
-- 3. 返回该字符串的首地址
+1. 申请了空间(在常量区)，存放了字符串
+2. 在字符串尾加上了'/0'   
+3. 返回该字符串的首地址
 
 先来看puts()这个函数 
 
@@ -595,4 +594,3 @@ void main(）{
 
 - [char、char*和char**区别与联系(入门级)-CSDN博客](https://blog.csdn.net/qq_50635297/article/details/129217630)
 - [C++中的string与char[]、char*详解_c++中char数组和string的关系-CSDN博客](https://blog.csdn.net/m0_37433111/article/details/107347101)
-- 

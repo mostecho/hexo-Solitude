@@ -12,7 +12,6 @@ categories:
 recommend: true
 abbrlink: 4f10
 date: 2025-09-08 15:00:05
-series:
 ---
 
 ## 前言
@@ -164,7 +163,6 @@ str4 是常量字符数组，sizeof 得到字符总数即 6；strlen 计算至�
 
 sizeof 计算的是变量的大小，不受字符’\0’影响。
 strlen 计算的是字符串的实际长度，以’\0’作为长度判定依据，遇到’\0’就停止，长度不包括’\0’。
-
 
 
 参考：

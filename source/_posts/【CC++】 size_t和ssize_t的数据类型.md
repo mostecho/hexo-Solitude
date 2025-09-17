@@ -11,7 +11,6 @@ categories:
 recommend: true
 abbrlink: b264
 date: 2025-09-08 14:14:31
-series:
 ---
 
 ## size_t
@@ -112,6 +111,3 @@ ssize_t 和size_t类似,但必需是**signed有符号**（表示 [signed](https:
 参考：
 - https://blog.csdn.net/qq_34018840/article/details/100884317
 - https://blog.csdn.net/fuxiaoxiaoyue/article/details/82747332
-
-
-

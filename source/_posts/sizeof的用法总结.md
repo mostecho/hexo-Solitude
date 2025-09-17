@@ -12,7 +12,6 @@ categories:
 recommend: true
 abbrlink: f26d
 date: 2025-09-10 21:00:05
-series:
 ---
 
 # C 语言---sizeof的用法总结

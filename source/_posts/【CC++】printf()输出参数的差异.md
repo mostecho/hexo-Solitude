@@ -11,7 +11,6 @@ categories:
 recommend: true
 abbrlink: 516a
 date: 2025-09-08 15:20:39
-series:
 ---
 
 ## printf() 中的 format 格式
@@ -71,7 +70,8 @@ printf() 的标签属性为：
 该表达式用来表明输出格式是长度型（size_t）的无符号整型值。其中 size_t 在不同的位数操作系统中定义是不同的：
 
 ```cpp
-typedef unsigned int    size_t;typedef unsigned long   size_t;
+typedef unsigned int    size_t;
+typedef unsigned long   size_t;
 ```
 
 因此在程序设计的时候，如果参数是 size_t 或者 ssize_t，在进行格式化输入或输出的时候务必使用 ‘z’ 修饰符，以防止显示异常。
