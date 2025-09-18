@@ -22,28 +22,34 @@
 #   date: 2025-01-01 00:00
 #   video:
 #     bilibili: BV1AH4y1p7mF
+
 # - content: 外链视频短文
 #   date: 2025-01-01 00:00
 #   video:
 #     player: 视频直链
+
 # - content: 音乐短文
 #   date: 2025-01-01 00:00
 #   aplayer:
 #     server: netease # 音乐服务商，如netease
 #     id: 2076446373 # 单曲id，不了解具体查看方法建议询问搜索引擎
+
 # - content: 图片短文（无图片描述）
 #   date: 2025-01-01 00:00
 #   image:
 #     - https://bu.dusays.com/2025/08/12/689a2b8c80875.png
 #     - https://bu.dusays.com/2025/08/12/689a2b8c80875.png
+
 # - content: 图片短文（有图片描述）
 #   date: 2025-01-01 00:00
 #   image:
 #     - url: https://bu.dusays.com/2025/04/11/67f9202c74ecc.jpg
 #       alt: 首页背景
+
 # - content: 链接短文
 #   date: 2025-01-01 00:00
 #   link: 链接
+
 # - content: 地点短文
 #   date: 2025-01-01 00:00
 #   location: 发布地点
