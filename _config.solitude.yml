@@ -539,7 +539,7 @@ translate:
 # 右下角悬停导航栏
 rightside:
   enable: true
-  percent: true
+  percent: false
   hide:
     enable: true
     translate: true
