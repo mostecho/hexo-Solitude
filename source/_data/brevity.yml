@@ -19,8 +19,9 @@
   date: 2025-09-17 23:25
 
 - content: 预祝生日快乐，虽然我今天就把生日过了，但是明天也会很好。
-          [生日快乐](https://bu.dusays.com/2025/09/22/68d0d056989b9.jpg)
-          [魔王S](https://bu.dusays.com/2025/09/22/68d0d056b453d.jpg)
+  image:
+        - url: https://bu.dusays.com/2025/09/22/68d0d056989b9.jpg
+        - url: https://bu.dusays.com/2025/09/22/68d0d056b453d.jpg
   date: 2025-09-21 23:25
 
 # - content: B站视频短文
