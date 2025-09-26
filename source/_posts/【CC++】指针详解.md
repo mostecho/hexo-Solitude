@@ -1,7 +1,7 @@
 ---
 title: 【C/C++】指针详解
-cover: https://bu.dusays.com/2025/09/16/68c8516846180.jpg
-Sticky: 1
+cover: 'https://bu.dusays.com/2025/09/16/68c8516846180.jpg'
+sticky: 1
 tags:
   - C++
   - C
@@ -10,8 +10,8 @@ tags:
 categories:
   - C++
 recommend: true
-abbrlink:
-date: 2025-09-27 0:58:52
+abbrlink: '52e7'
+date: 2025-09-27 00:58:52
 ---
 
 # 前言
