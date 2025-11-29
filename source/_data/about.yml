@@ -68,9 +68,9 @@ careers:
     - school: 独立开发者
       major: 业余时间
       color: "orange"
-    - school: 逆向工程
-      major: 自学ing
-      color: "green"
+    # - school: 逆向工程
+    #   major: 自学ing
+    #   color: "green"
     
   image: 
 
