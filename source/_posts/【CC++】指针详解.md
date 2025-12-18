@@ -1,6 +1,7 @@
 ---
 title: 【C/C++】指针详解
 cover: 'https://bu.dusays.com/2025/09/16/68c8516846180.jpg'
+ai_text: 摘要内容
 sticky: 1
 tags:
   - C++
