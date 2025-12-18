@@ -279,7 +279,7 @@ post:
   # Article Local AI
   # 文章本地AI
   ai:
-    enable: true
+    enable: false
     modelName: 小七 GPT
   # Article meta information
   # 文章元信息
