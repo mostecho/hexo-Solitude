@@ -141,7 +141,7 @@ aside:
   # Sticky: Fixed position / noSticky: Not fixed position
   # Sticky: 固定位置 / noSticky: 不固定位置
   home: # on the homepage
-    noSticky: "about"
+    noSticky: 
     Sticky: "allInfo"
   post: # on the article page
     noSticky: "about"
@@ -846,7 +846,7 @@ comment:
     limit: 5 # 评论数 / Number of comments
 # Twikoo: https://solitude.js.org/configuration/comment/twikoo
 twikoo: # https://twikoo.js.org/
-  envId: https://twikooblog.netlify.app/.netlify/functions/twikoo
+  envId: https://www.twikoo.monstecho.top/.netlify/functions/twikoo
   region: # Environment locale, default is ap-shanghai, Tencent cloud environment fill ap-shanghai or ap-guangzhou; Vercel environment do not fill the.
   style: true # Use custom styles when turned on
   accessToken: # AccessToken
