@@ -141,7 +141,7 @@ aside:
   # Sticky: Fixed position / noSticky: Not fixed position
   # Sticky: 固定位置 / noSticky: 不固定位置
   home: # on the homepage
-    noSticky:
+    noSticky: "about"
     Sticky: "allInfo"
   post: # on the article page
     noSticky: "about"
