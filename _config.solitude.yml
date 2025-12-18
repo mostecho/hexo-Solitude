@@ -1021,7 +1021,7 @@ CDN:
     # artalk_css:
     # artalk_js:
     # blueimp_md5:
-    # busuanzi_js:
+    busuanzi_js: https://cdn.busuanzi.cc/busuanzi/3.6.9/busuanzi.min.js
     # chart_js:
     # color_thief:
     # fancyapps_css:
