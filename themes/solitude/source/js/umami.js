@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     function loadUmamiStats() {
         // ！！！请务必修改以下变量为你的实际值 ！！！
-        const umamiToken = "irUeQa2C8qh3vhyFFFZ4h06MzQEoMchxbQoeHWVFE3g+ox9ihoZp5ZySr6sQ0CKfhNXz5/Da8TQGMDQMHG5OI8NPvnc542vkvou+NmuvaVbKqzzV+oplABUsz9US8exAmNBAbt0NUxt178E1EYHFHIMwlg7NHRnVIYy2Vm8BlBGJ7rOj7jQXPSMntUEk/NV97qoZHc+KK0IcIWTCEG4UMHRV4Qlul/L120kPdVhMxXSKlyVDWCFpS0e+ufOj6Ze5KPWnyPbeSljNk2grBxs8ulpAVZbh0m1/0g3nxKdbb2StO0x4fj1W6N0MJ21bSHzpzffA0idvAGJHUM/0Rn2yunMfX0bumlRX2DiV+dJN4dZg2bEhgMKcOrqvtyxQ";
+        const umamiToken = "ji3nS1vN3nOCmz42bXxK5mIk3pzNegxB7GjDedyVz4KPOoe9ZHXEN9wm++HxYIRWmh8VJUa7Cj0VnLXnOMDigfHVW0n3YqayBBji2Mfm9jibD8Yqxf1a4GOP5liHDhOXHBziUJpLo1XNrYoctWhRxuMdohf+U60KIH4s4UC0tHZV8lk6+6Q7n5TntVEamHY4oNXjRQmlNftZIa/a6RlGq+XVihSv+YE27nhBjqXmHxjUqbBgAW0hCVT5RudrDhumF5GRUx58dCqrcELnstvF/CAwgOQ5OcqZpL8eX2TTAVGbK3J0PddEAvP3SUzeqf69Tq+F1RpdNsi8xJWXJxcwDJN4pmgSgbPoStInFe7zmRcEUWg5GFGbs7mxt5Tq";
         const websiteId = "a88d93ae-6c6e-46cf-a6cd-5a6a01b0caae";
         const umamiBaseUrl = "https://www.umami.monstecho.top"; // 你的 Umami 实例地址
 

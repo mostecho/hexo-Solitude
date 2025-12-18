@@ -37,20 +37,8 @@ if tj || oneself
                                     s.innerHTML = html;
                                 });
                     when 'custom'
-                        script.
-                            fetch("#{tj.url}")
-                                .then(res => res.json())
-                                .then(data => {
-                                    const title = {"today_uv": "今日人数", "today_pv": "今日访问", "yesterday_uv": "昨日人数", "yesterday_pv": "昨日访问", "last_month_pv": "最近月访问", "last_year_pv": "最近年访问"};
-
-                                    let s = document.getElementById("statistic");
-
-                                    for (let key in data) {
-                                    if (data.hasOwnProperty(key) && title[key]) {
-                                        s.innerHTML += `<div><span>${title[key]}</span><span id="${key}">${data[key]}</span></div>`;
-                                    }
-                                    }
-                                });
+                        //- 前端脚本从 Umami 获取数据并填充 #statistic
+                        script(src=url_for('/js/umami.js'))
 
 
         if oneself
