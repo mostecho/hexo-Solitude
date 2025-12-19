@@ -69,7 +69,7 @@ nav:
   # Right button
   # 右侧按钮
   right:
-    random: false # Random article / 随机文章按钮
+    random: true # Random article / 随机文章按钮
     custom:
      - name: 开往 # 名字
        url: https://www.travellings.cn/go.html # 跳转链接
