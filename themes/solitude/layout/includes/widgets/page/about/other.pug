@@ -19,23 +19,32 @@ if tj || oneself
                 case tj.provider
                     when '51la'
                         script.
-                            fetch("#{tj.url}")
-                                .then(res => res.text())
-                                .then(data => {
-                                    const title = ["在线人数", "今日人数", "今日访问", "昨日人数", "昨日访问", "总访问量"];
-                                    let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
-                                    num = num.map(el => {
-                                        let val = el.replace(/(<\/span><span>)/g, "");
-                                        return val.replace(/(<\/span><\/p>)/g, "");
+                            function load51laStatistics() {
+                                fetch("#{tj.url}")
+                                    .then(res => res.text())
+                                    .then(data => {
+                                        const title = ["在线人数", "今日人数", "今日访问", "昨日人数", "昨日访问", "总访问量"];
+                                        let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
+                                        num = num.map(el => {
+                                            let val = el.replace(/(<\/span><span>)/g, "");
+                                            return val.replace(/(<\/span><\/p>)/g, "");
+                                        });
+                                        const s = document.getElementById("statistic");
+                                        let html = '';
+                                        for (let i = 0; i < num.length; i++) {
+                                            if (i === 5) continue;
+                                            html += `<div><span>${title[i]}</span><span id="${title[i]}">${num[i]}</span></div>`;
+                                        }
+                                        s.innerHTML = html;
+                                    })
+                                    .catch(error => {
+                                        console.error('加载51la统计数据失败:', error);
+                                        const s = document.getElementById("statistic");
+                                        s.innerHTML = '<div>统计数据加载失败</div>';
                                     });
-                                    const s = document.getElementById("statistic");
-                                    let html = '';
-                                    for (let i = 0; i < num.length; i++) {
-                                        if (i === 5) continue;
-                                        html += `<div><span>${title[i]}</span><span id="${title[i]}">${num[i]}</span></div>`;
-                                    }
-                                    s.innerHTML = html;
-                                });
+                            }
+                            document.addEventListener('DOMContentLoaded', load51laStatistics);
+                            setInterval(load51laStatistics, 30000); // 每30秒更新一次
                     when 'custom'
                         script.
                             const CONFIG = {
@@ -200,6 +209,7 @@ if tj || oneself
 
                             // 页面加载完成后执行
                             document.addEventListener('DOMContentLoaded', loadStatistics);
+                            setInterval(loadStatistics, 30000); // 每30秒更新一次
 
 
         if oneself
