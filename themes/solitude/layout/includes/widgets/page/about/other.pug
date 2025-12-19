@@ -22,7 +22,7 @@ if tj || oneself
                             fetch("#{tj.url}")
                                 .then(res => res.text())
                                 .then(data => {
-                                    const title = ["最近活跃", "今日人数", "今日访问", "昨日人数", "昨日访问", "本月访问", "总访问量"];
+                                    const title = ["今日人数", "今日访问", "昨日人数", "昨日访问", "本月访问", "总访问量"];
                                     let num = data.match(/(<\/span><span>).*?(\/span><\/p>)/g);
                                     num = num.map(el => {
                                         let val = el.replace(/(<\/span><span>)/g, "");
@@ -30,9 +30,8 @@ if tj || oneself
                                     });
                                     const s = document.getElementById("statistic");
                                     let html = '';
-                                    for (let i = 0; i < num.length; i++) {
-                                        if (i === 0 || i === num.length - 1) continue;
-                                        html += `<div><span>${title[i]}</span><span id="${title[i]}">${num[i]}</span></div>`;
+                                    for (let i = 1; i < num.length; i++) {
+                                        html += `<div><span>${title[i-1]}</span><span id="${title[i-1]}">${num[i]}</span></div>`;
                                     }
                                     s.innerHTML = html;
                                 });
@@ -175,9 +174,8 @@ if tj || oneself
                                 };
                                 
                                 // 填充统计信息
-                                const titles = ["最近活跃", "今日人数", "今日访问", "昨日人数", "昨日访问", "本月访问", "总访问量"];
+                                const titles = ["今日人数", "今日访问", "昨日人数", "昨日访问", "本月访问", "总访问量"];
                                 const values = [
-                                  responseData.online_users,
                                   responseData.today_uv,
                                   responseData.today_pv,
                                   responseData.yesterday_uv,
