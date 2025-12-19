@@ -163,7 +163,9 @@ likes:
 # 网站统计数据展示模块
 tj: # 统计
   provider: custom # 值为 51la（51la网站统计）或 custom（自建统计）
-  url: https://www.umami.monstecho.top  # 需要到51la官网注册自行获取 or 自行搭建 Heo 的 百度统计项目，填写访问地址即可
+  url: https://www.umami.monstecho.top  # Umami API 基础 URL
+  token: 4+H5eF/3nKUf+L95js33xb1hyfagPovmAsckL8RLFWN7BuwwY9LxAUtEI8+n6iRuxqL1oBumXJXklT7se/A/HNaqxp65meoSWnL6PFj+Df7HAohnXltSV4vIZO+cti+jFqR4aHV8a/Ow3gulQlDW87mrPRTUd0qHjYhXt8NMnO84+NDzmzMndpcVS/mN8BsHfiGrkDBs0/sDPyC8QZxCxmFJCDrE+DPbzaR822/Dgc0+cOXyJ4jkdUJeGn2RNyfcyx+D+Pi+00x0Xt3GcxwAHwZX5qqVRDUCYxmyzu4ckaL1wx8CPOTIvbxgTKn3RYXQkHsOxdYxCMMkziLc+43OVdD5RlR+15DzD9S0coyFvYLhKB68EPou5H1RdjMf  # Umami API Token
+  websiteId: a88d93ae-6c6e-46cf-a6cd-5a6a01b0caae  # 网站 ID
   img: https://bu.dusays.com/2025/09/03/68b7ce5262337.webp # 背景
   desc: 本站采用umami自建数据统计
   button: true

@@ -37,8 +37,170 @@ if tj || oneself
                                     s.innerHTML = html;
                                 });
                     when 'custom'
-                        //- 前端脚本从 Umami 获取数据并填充 #statistic
-                        script(src=url_for('/js/umami.js'))
+                        script.
+                            const CONFIG = {
+                              baseUrl: "#{tj.url}",
+                              token: "#{tj.token}",
+                              websiteId: "#{tj.websiteId}"
+                            };
+
+                            // 时间范围配置
+                            const TIME_CONFIGS = {
+                              today: () => {
+                                const now = new Date();
+                                return {
+                                  start: new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+                                  end: new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1),
+                                  unit: 'hour'
+                                };
+                              },
+                              yesterday: () => {
+                                const now = new Date();
+                                return {
+                                  start: new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1),
+                                  end: new Date(now.getFullYear(), now.getMonth(), now.getDate()),
+                                  unit: 'day'
+                                };
+                              },
+                              lastMonth: () => {
+                                const now = new Date();
+                                return {
+                                  start: new Date(now.getFullYear(), now.getMonth() - 1, 1),
+                                  end: new Date(now.getFullYear(), now.getMonth(), 1),
+                                  unit: 'month'
+                                };
+                              },
+                              total: () => {
+                                return {
+                                  start: new Date(2000, 0, 1),
+                                  end: new Date(),
+                                  unit: 'year'
+                                };
+                              },
+                              now: () => {
+                                const now = new Date();
+                                return {
+                                  start: new Date(now.getTime() - 15 * 60 * 1000), // 最近15分钟
+                                  end: now,
+                                  unit: 'hour'
+                                };
+                              }
+                            };
+
+                            // 获取统计数据
+                            async function fetchStats(timeRange) {
+                              const config = TIME_CONFIGS[timeRange]();
+                              if (!config) return { visits: 0, pageviews: 0 };
+                              
+                              const params = new URLSearchParams({
+                                startAt: Math.floor(config.start.getTime()),
+                                endAt: Math.floor(config.end.getTime()),
+                                unit: config.unit
+                              });
+                              
+                              const url = CONFIG.baseUrl + '/api/websites/' + CONFIG.websiteId + '/stats?' + params.toString();
+                              
+                              try {
+                                const response = await fetch(url, {
+                                  headers: {
+                                    'Authorization': 'Bearer ' + CONFIG.token,
+                                    'Content-Type': 'application/json'
+                                  }
+                                });
+                                
+                                if (!response.ok) {
+                                  throw new Error('HTTP错误！状态码: ' + response.status);
+                                }
+                                
+                                const data = await response.json();
+                                
+                                // 提取访问数据（兼容不同API返回格式）
+                                const extractMetric = (key) => {
+                                  // 对于实时数据，特殊处理：即使主数据字段为0，也检查comparison字段
+                                  if (timeRange === 'now' && data.comparison?.[key]) {
+                                    const comparisonValue = parseInt(data.comparison[key]) || 0;
+                                    if (comparisonValue > 0) {
+                                      return comparisonValue;
+                                    }
+                                  }
+                                  
+                                  // 主数据字段
+                                  if (data[key] !== undefined && data[key] !== null) {
+                                    return typeof data[key] === 'object' ? (data[key].value || data[key].count || 0) : parseInt(data[key]) || 0;
+                                  }
+                                  
+                                  // 指标字段
+                                  if (data.metrics?.[key]) {
+                                    return data.metrics[key].value || data.metrics[key].count || 0;
+                                  }
+                                  
+                                  // 比较数据字段
+                                  if (data.comparison?.[key]) {
+                                    return parseInt(data.comparison[key]) || 0;
+                                  }
+                                  
+                                  return 0;
+                                };
+                                
+                                return {
+                                  visits: extractMetric('visits'),
+                                  pageviews: extractMetric('pageviews')
+                                };
+                              } catch (error) {
+                                console.error('获取统计数据失败: ' + error.message);
+                                return { visits: 0, pageviews: 0 };
+                              }
+                            }
+
+                            // 主函数：获取并显示统计数据
+                            async function loadStatistics() {
+                              try {
+                                // 并行获取所有统计数据
+                                const timeRanges = ['today', 'yesterday', 'lastMonth', 'total', 'now'];
+                                const statsData = await Promise.all(timeRanges.map(range => fetchStats(range)));
+                                
+                                // 构建统计数据对象
+                                const stats = Object.fromEntries(timeRanges.map((range, index) => [range, statsData[index]]));
+                                
+                                // 构建响应数据
+                                const responseData = {
+                                  today_uv: stats.today.visits,
+                                  today_pv: stats.today.pageviews,
+                                  online_users: stats.now.visits,
+                                  yesterday_uv: stats.yesterday.visits,
+                                  yesterday_pv: stats.yesterday.pageviews,
+                                  last_month_pv: stats.lastMonth.pageviews,
+                                  total_uv: stats.total.visits,
+                                  total_pv: stats.total.pageviews
+                                };
+                                
+                                // 填充统计信息
+                                const titles = ["最近活跃", "今日人数", "今日访问", "昨日人数", "昨日访问", "本月访问", "总访问量"];
+                                const values = [
+                                  responseData.online_users,
+                                  responseData.today_uv,
+                                  responseData.today_pv,
+                                  responseData.yesterday_uv,
+                                  responseData.yesterday_pv,
+                                  responseData.last_month_pv,
+                                  responseData.total_uv
+                                ];
+                                
+                                const s = document.getElementById("statistic");
+                                let html = '';
+                                for (let i = 0; i < titles.length; i++) {
+                                  html += `<div><span>${titles[i]}</span><span id="${titles[i]}">${values[i]}</span></div>`;
+                                }
+                                s.innerHTML = html;
+                              } catch (error) {
+                                console.error('加载统计数据失败:', error);
+                                const s = document.getElementById("statistic");
+                                s.innerHTML = '<div>统计数据加载失败</div>';
+                              }
+                            }
+
+                            // 页面加载完成后执行
+                            document.addEventListener('DOMContentLoaded', loadStatistics);
 
 
         if oneself
