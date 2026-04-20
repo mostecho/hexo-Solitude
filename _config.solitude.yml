@@ -883,7 +883,7 @@ giscus:
 # Search
 search:
   enable: true
-  type: local # local / algolia / docsearch
+  type: algolia # local / algolia / docsearch
   tags:
      - C
      - C++
@@ -894,7 +894,7 @@ search:
 
   # Local search
   local:
-    preload: true
+    preload: false
     CDN: # url: search.xml
 
   # DocSearch
