@@ -158,6 +158,6 @@ hexo_safego:
 
     sitemap:
       path: sitemap.xml
-      priority: 0.5
       changefreq: daily
-      lastmod: true
+      tags: true
+      categories: true
