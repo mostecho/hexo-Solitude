@@ -117,10 +117,10 @@ hometop:
         color: "#df5b40"
 
   group:
-    朋友: /links// || fas fa-user-group || linear-gradient(to right,#f65,#ffbf37)
-    随笔: /essay/ || fas fa-book || linear-gradient(to right,#f6a,#f3f)
-    工具: /tools/ || fas fa-wrench || linear-gradient(to right,#6cf,#3af)
-
+      朋友: /links// || fas fa-user-group || linear-gradient(to right,#f65,#ffbf37)
+      随笔: /essay/ || fas fa-book || linear-gradient(to right,#f6a,#f3f)
+      工具: /tools/ || fas fa-wrench || linear-gradient(to right,#6cf,#3af)
+      朋友圈: /fcircle/ || fas fa-comments || linear-gradient(to right,#9cf,#36f)
 
   recommendList:
     enable: true

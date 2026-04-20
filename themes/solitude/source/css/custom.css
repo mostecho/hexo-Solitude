@@ -4,3 +4,20 @@
     font-weight: normal;  /* 字体粗细 */
     font-style: normal;   /* 字体样式 */
 }
+
+#home_top .banners-links {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-auto-flow: row;
+    gap: 12px 10px;
+    height: auto;
+    flex-wrap: nowrap;
+}
+
+#home_top .banners-link-btn {
+    margin: 0;
+}
+
+#home_top .banners-link-title {
+    white-space: nowrap;
+}
