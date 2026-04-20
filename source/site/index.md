@@ -39,7 +39,7 @@ rightbtnlink: "/history/"
 迁移主题到 [solitude](https://solitude.js.org/cn)
 {% endtimenode %}
 {% timenode 2025-05～09 %}
-这段时间在摸鱼偏多，做过必应，百度收录，魔改过butterfly，也在学习许多新知识 
+这段时间摸鱼偏多，做过必应，百度收录，魔改过butterfly，也在学习新知识 
 {% endtimenode %}
 {% timenode 2025-04-26 %}
 开始更新 EasyX图形库游戏开发系列内容（现已停更）
@@ -63,7 +63,7 @@ rightbtnlink: "/history/"
 购入了腾讯云2h2g服务器 一年
 {% endtimenode %}
 {% timenode 2025-03-29 %}
-购入了阿里云域名 monstecho.top 三年
+租用阿里云域名 monstecho.top 三年
 {% endtimenode %}
 {% timenode 2025-03-28 %}
 用 html 加 css 写出了第一个简陋的网站
@@ -72,13 +72,3 @@ rightbtnlink: "/history/"
 开始计划写一个属于自己的网站
 {% endtimenode %}
 {% endtimeline %}
-
-
-
-
-
-
-
-
-
-
