@@ -1,3 +1,5 @@
 User-agent: *
 Disallow:
 Sitemap: https://www.monstecho.top/sitemap.xml
+
+# Algolia-Crawler-Verif: D3E3781A0C877E34
