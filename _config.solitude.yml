@@ -163,7 +163,7 @@ aside:
     # 介绍 / Introduction
     description: 明明他的梦一点不大
     # 内容 / Content
-    content: 我的博客<br>记录我的生活<br>记录了我的来时路,也记录着我将去的远方
+    content: 这是我的个人博客 <br> 记录了我的来时路 <br> 也记录着我将去的远方
     state:  
       morning: ✨ 早上好master，新的一天开始了
       noon: 🍲 现在是干饭时间
@@ -174,6 +174,7 @@ aside:
        - go go go 出发喽！
        - 相信自己，just do it!
        - 祝你好运，陌生人
+       - 我爱你，即使连死亡也无法阻挡
     # social
     # 社交信息图标
     information:
