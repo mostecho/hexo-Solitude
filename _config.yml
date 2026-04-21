@@ -158,8 +158,8 @@ hexo_safego:
 
     sitemap:
       path: 
-        - Sitemap.xml
-        - Sitemap.xml
+        - sitemap.xml
+        - sitemap.xml
       changefreq: daily
       tags: true
       categories: true
