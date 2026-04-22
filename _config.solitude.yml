@@ -316,13 +316,13 @@ post:
     # Reward list
     # 打赏列表
     list:
-      - name: weixin pay
-        qcode: https://bu.dusays.com/2025/09/04/68b873e2bd410.png
-        color: var(--green)
+      # - name: weixin pay
+      #   qcode: https://bu.dusays.com/2025/09/04/68b873e2bd410.png
+      #   color: var(--green)
       
-      - name: alipay
-        qcode: https://bu.dusays.com/2025/09/04/68b8764492cbe.png
-        color: var(--blue)
+      # - name: alipay
+      #   qcode: https://bu.dusays.com/2025/09/04/68b8764492cbe.png
+      #   color: var(--blue)
 
   # Share icon
   # 分享图标
