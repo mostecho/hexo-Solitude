@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Block low-value or duplicate URL patterns
+Disallow: /go.html
+Disallow: /go.html?*
+Disallow: /*?*
+
+# Optional: keep private area out of index
+Disallow: /private/
+
+Sitemap: https://www.monstecho.top/sitemap.xml
+
+# Algolia crawler verification
+# Algolia-Crawler-Verif: FA8D9B97684FA0CB
