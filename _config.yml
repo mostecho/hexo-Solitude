@@ -18,7 +18,7 @@ permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -118,6 +118,9 @@ feed:
 abbrlink:
     alg: crc16   #算法： crc16(default) and crc32
     rep: hex     #进制： dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制
+    drafts: false   # Whether to generate abbrlink for drafts. (false in default)
+    force: false    # Enable force mode. In this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had an abbrlink. (false in default)
+    writeback: true # Whether to write changes to front-matters back to the actual markdown files. (true in default)
 
 # hexo-safego安全跳转插件
 # see https://blog.liushen.fun/posts/1dfd1f41/
