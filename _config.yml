@@ -102,7 +102,9 @@ theme: solitude
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: git@github.com:mostecho/mostecho.github.io.git
+  repo:
+    github: git@github.com:mostecho/mostecho.github.io.git
+    server: ssh://root@103.79.184.251:22/root/git/blog.git
   branch: main
 
 # https://github.com/hexojs/hexo-generator-feed
