@@ -1,0 +1,15 @@
+        name: 服务器执行拉取命令
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd /opt/1panel/www/sites/www.monstecho.top/index
+            git config --global --add safe.directory "$(pwd)"
+            git fetch --all --depth=1
+            git reset --hard origin/main
+            git pull --depth=1
+            echo "✅ 已拉取 page 分支最新内容"
