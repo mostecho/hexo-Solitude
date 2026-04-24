@@ -50,7 +50,8 @@ if tj || oneself
                             const CONFIG = {
                               baseUrl: "#{tj.url}",
                               token: "#{tj.token}",
-                              websiteId: "#{tj.websiteId}"
+                              websiteId: "#{tj.websiteId}",
+                              timezone: "#{config.timezone || 'Asia/Shanghai'}"
                             };
 
                             // 时间范围配置
@@ -104,13 +105,15 @@ if tj || oneself
                               const params = new URLSearchParams({
                                 startAt: Math.floor(config.start.getTime()),
                                 endAt: Math.floor(config.end.getTime()),
-                                unit: config.unit
+                                unit: config.unit,
+                                timezone: CONFIG.timezone
                               });
                               
                               const url = CONFIG.baseUrl + '/api/websites/' + CONFIG.websiteId + '/stats?' + params.toString();
                               
                               try {
                                 const response = await fetch(url, {
+                                  cache: 'no-store',
                                   headers: {
                                     'Authorization': 'Bearer ' + CONFIG.token,
                                     'Content-Type': 'application/json'
@@ -164,6 +167,11 @@ if tj || oneself
                             // 主函数：获取并显示统计数据
                             async function loadStatistics() {
                               try {
+                                const s = document.getElementById("statistic");
+                                if (!s) return;
+
+                                s.innerHTML = '<div><span>加载中</span><span>...</span></div>';
+
                                 // 并行获取所有统计数据
                                 const timeRanges = ['today', 'yesterday', 'lastMonth', 'total', 'now'];
                                 const statsData = await Promise.all(timeRanges.map(range => fetchStats(range)));
@@ -194,7 +202,6 @@ if tj || oneself
                                   responseData.total_uv
                                 ];
                                 
-                                const s = document.getElementById("statistic");
                                 let html = '';
                                 for (let i = 0; i < titles.length; i++) {
                                   html += `<div><span>${titles[i]}</span><span id="${titles[i]}">${values[i]}</span></div>`;
@@ -207,9 +214,18 @@ if tj || oneself
                               }
                             }
 
-                            // 页面加载完成后执行
-                            document.addEventListener('DOMContentLoaded', loadStatistics);
-                            setInterval(loadStatistics, 30000); // 每30秒更新一次
+                            function initStatistics() {
+                              loadStatistics();
+                              if (window.__solitudeAboutStatsTimer) {
+                                clearInterval(window.__solitudeAboutStatsTimer);
+                              }
+                              window.__solitudeAboutStatsTimer = setInterval(loadStatistics, 15000);
+                            }
+
+                            // 页面首次加载和 PJAX 切换都触发统计刷新
+                            document.addEventListener('DOMContentLoaded', initStatistics);
+                            window.addEventListener('pjax:complete', initStatistics);
+                            initStatistics();
 
 
         if oneself
